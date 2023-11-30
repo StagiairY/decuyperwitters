@@ -1,7 +1,7 @@
 <?php
 include('include/header.php')
 ?>
-//your code
+<h1>Kleine hoefdieren</h1>
 <?php
 include('include/footer.php')
 ?>
