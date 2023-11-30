@@ -1,12 +1,12 @@
 <div class="footer">
     <div class="container">
         <div class="row mb-4">
-            <div class="col-lg-3">
+            <div class="col-lg-4 mb-4">
                 <p class="mb-4"><img src="../images/part1/decuyperwitters.png" alt="Afbeelding" class="img-fluid"></p>
                 <p>De Cuyper Witters uit Heist-op-den-Berg is uw specialist voor alles op het gebied van dier en tuin. Wij bieden een breed scala aan producten en professioneel advies.</p>
                 <p><a href="#">Lees Meer</a></p>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 mb-4">
                 <h3 class="footer-heading"><span>Ons Bedrijf</span></h3>
                 <ul class="list-unstyled">
                     <li><a href="#">Over Ons</a></li>
@@ -17,7 +17,7 @@
                     <li><a href="#">Projecten</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4 mb-4">
                 <h3 class="footer-heading"><span>Onze Diensten</span></h3>
                 <ul class="list-unstyled">
                     <li><a href="#">Mulchen</a></li>
@@ -27,29 +27,20 @@
                     <li><a href="#">Zaaien</a></li>
                 </ul>
             </div>
-            <div class="col-lg-3">
-                <h3 class="footer-heading"><span>Contact</span></h3>
-                <ul class="list-unstyled">
-                    <li><a href="#">Helpcenter</a></li>
-                    <li><a href="#">Ondersteuningsgemeenschap</a></li>
-                    <li><a href="#">Pers</a></li>
-                    <li><a href="#">Veelgestelde Vragen</a></li>
-                    <li><a href="#">Onze Partners</a></li>
-                </ul>
-            </div>
         </div>
     </div>
     <div class="container">
         <div class="d-flex justify-content-between">
-            <div class="col text-center text-lg-start">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center text-md-start mb-4">
                 <span> Developed &amp; Hosted by <a href="https://www.developmentspot.be/" style="color:#95aa7f;">Development Spot</a></span>
             </div>
-            <div class="col text-end credits">
+            <div class="col-lg-4 col-md-6 col-sm-12 text-center text-md-end credits">
                 © Copyright <span style="color:#95aa7f">De Cuyper Witter</span>. All Rights Reserved
             </div>
         </div>
     </div>
 </div>
+
 
 
 

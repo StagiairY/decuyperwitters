@@ -110,8 +110,9 @@ include('include/header.php')
       </div>
     </div>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532.4879674980743!2d4.679626367058454!3d51.05058551047885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c15850a02dfbcf%3A0x79589e1ffc5187ab!2sKoningsbaan%2040%2C%202220%20Heist-op-den-Berg!5e0!3m2!1snl!2sbe!4v1701353178568!5m2!1snl!2sbe" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532.4879674980743!2d4.679626367058454!3d51.05058551047885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c15850a02dfbcf%3A0x79589e1ffc5187ab!2sKoningsbaan%2040%2C%202220%20Heist-op-den-Berg!5e0!3m2!1snl!2sbe!4v1701353178568!5m2!1snl!2sbe"
+            height="450" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <?php
 include('include/footer.php')
