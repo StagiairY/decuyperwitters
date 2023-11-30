@@ -127,8 +127,8 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <li class="<?php echo ($current_page == 'about.html') ? 'active' : ''; ?>">
                             <a href="about.html" class="nav-link text-left">Over ons</a>
                         </li>
-                        <li class="<?php echo ($current_page == 'services.html') ? 'active' : ''; ?>">
-                            <a href="services.html" class="nav-link text-left">diensten</a>
+                        <li class="<?php echo ($current_page == 'diensten.php') ? 'active' : ''; ?>">
+                            <a href="diensten.php" class="nav-link text-left">diensten</a>
                         </li>
                         <li class="<?php echo ($current_page == 'blog.html') ? 'active' : ''; ?>">
                             <a href="blog.html" class="nav-link text-left">Blog</a>
