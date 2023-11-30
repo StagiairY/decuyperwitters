@@ -1,7 +1,7 @@
 <?php
 include('include/header.php')
 ?>
-//your code
+<h1>Alles voor huis en tuin</h1>
 <?php
 include('include/footer.php')
 ?>
