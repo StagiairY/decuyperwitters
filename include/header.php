@@ -34,6 +34,25 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<style>
+    /* Default font size */
+    body {
+        font-size: 16px;
+    }
+
+    /* Responsive font size adjustments */
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px; /* Adjust font size for smaller screens */
+        }
+    }
+
+    @media (max-width: 576px) {
+        body {
+            font-size: 12px; /* Further adjust font size for even smaller screens */
+        }
+    }
+</style>
 
 <div class="site-wrap">
     <div class="site-mobile-menu site-navbar-target">
@@ -50,42 +69,41 @@
             <div class="row align-items-center">
                 <div class="col-6 col-lg-3">
                     <a href="index.html" class="logo">
-                        <img src="../images/part1/decuyperwitters.png" width="60" alt="Image" class="img-fluid">
+                        <img src="../images/part1/decuyperwitters.png" width="60" alt="Logo" class="img-fluid">
                     </a>
                 </div>
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-4 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex align-items-center">
-                        <div class="icon align-self-center mt-3">
+                        <div class="icon align-self-center mt-1">
                             <span class="icon-room text-primary"></span>
                         </div>
                         <div class="text">
-                            <span class="h4 d-block">Koningsbaan 40 - 2220 Heist-op-den-Berg</span>
+                            <span class="h6 d-block" style="width: 280px;">Koningsbaan 40 - 2220 Heist-op-den-Berg</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex align-items-center">
-                        <div class="icon align-self-center mt-3">
+                        <div class="icon align-self-center mt-1">
                             <span class="icon-phone text-primary"></span>
                         </div>
                         <div class="text">
-                            <span class="h4 d-block"><a href="tel:015233237" target="_blank">01523.32.37</a></span>
+                            <span class="h6 d-block"><a href="tel:015233237" target="_blank">01523.32.37</a></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-2 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex align-items-center">
-                        <div class="icon align-self-center mt-3">
+                        <div class="icon align-self-center mt-1">
                             <span class="icon-envelope text-primary"></span>
                         </div>
                         <div class="text">
-                            <span class="h4 d-block"><a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></span>
+                            <span class="h6 d-block"><a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 d-block d-lg-none text-right">
-                    <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
-                                class="icon-menu h3"></span></a>
+                    <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h4"></span></a>
                 </div>
             </div>
         </div>
@@ -93,38 +111,40 @@
 </div>
 
 
-<div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
+<?php
+$current_page = basename($_SERVER['PHP_SELF']);
+?>
 
+<div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
     <div class="container">
         <div class="d-flex align-items-center">
-
             <div class="mx-auto">
                 <nav class="site-navigation position-relative text-right" role="navigation">
                     <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-                        <li class="active">
-                            <a href="index.html" class="nav-link text-left">Home</a>
+                        <li class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">
+                            <a href="index.php" class="nav-link text-left">Home</a>
                         </li>
-                        <li>
+                        <li class="<?php echo ($current_page == 'about.html') ? 'active' : ''; ?>">
                             <a href="about.html" class="nav-link text-left">Over ons</a>
                         </li>
-                        <li>
+                        <li class="<?php echo ($current_page == 'services.html') ? 'active' : ''; ?>">
                             <a href="services.html" class="nav-link text-left">diensten</a>
                         </li>
-                        <li>
+                        <li class="<?php echo ($current_page == 'testimonials.html') ? 'active' : ''; ?>">
                             <a href="testimonials.html" class="nav-link text-left">Testimonials</a>
                         </li>
-                        <li><a href="blog.html" class="nav-link text-left">Blog</a></li>
-                        <li>
-                            <a href="contact.html" class="nav-link text-left">Contact</a>
+                        <li class="<?php echo ($current_page == 'blog.html') ? 'active' : ''; ?>">
+                            <a href="blog.html" class="nav-link text-left">Blog</a>
+                        </li>
+                        <li class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">
+                            <a href="contact.php" class="nav-link text-left">Contact</a>
                         </li>
                     </ul>
                 </nav>
-
             </div>
-
         </div>
     </div>
-
 </div>
+
 
 
