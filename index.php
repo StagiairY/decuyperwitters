@@ -59,7 +59,7 @@ include('include/header.php')
             </div>
             <div class="row no-gutters">
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Planten.php" class="service-link">
                         <div class="service-1">
                             <span class="number">01</span>
                             <div class="service-1-icon">
@@ -73,7 +73,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Dierenspeciaalzaak.php" class="service-link">
                         <div class="service-1">
                             <span class="number">02</span>
                             <div class="service-1-icon">
@@ -87,7 +87,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Rundvee.php" class="service-link">
                         <div class="service-1">
                             <span class="number">03</span>
                             <div class="service-1-icon">
@@ -101,7 +101,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Paarden.php" class="service-link">
                         <div class="service-1">
                             <span class="number">04</span>
                             <div class="service-1-icon">
@@ -115,7 +115,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Kleine_hoefdieren.php" class="service-link">
                         <div class="service-1">
                             <span class="number">05</span>
                             <div class="service-1-icon">
@@ -129,7 +129,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Stalstrooisel.php" class="service-link">
                         <div class="service-1">
                             <span class="number">06</span>
                             <div class="service-1-icon">
@@ -143,7 +143,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Neerhofdieren.php" class="service-link">
                         <div class="service-1">
                             <span class="number">07</span>
                             <div class="service-1-icon">
@@ -157,7 +157,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Honden_en_katten.php" class="service-link">
                         <div class="service-1">
                             <span class="number">08</span>
                             <div class="service-1-icon">
@@ -171,7 +171,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Duiven.php" class="service-link">
                         <div class="service-1">
                             <span class="number">09</span>
                             <div class="service-1-icon">
@@ -185,7 +185,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Vogels.php" class="service-link">
                         <div class="service-1">
                             <span class="number">10</span>
                             <div class="service-1-icon">
@@ -223,7 +223,7 @@ include('include/header.php')
             </div>
             <div class="row no-gutters">
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Planten.php" class="service-link">
                         <div class="service-1">
                             <span class="number">01</span>
                             <div class="service-1-icon">
@@ -237,7 +237,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Alles_voor_huis_en_tuin.php" class="service-link">
                         <div class="service-1">
                             <span class="number">02</span>
                             <div class="service-1-icon">
@@ -251,7 +251,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Meststoffen.php" class="service-link">
                         <div class="service-1">
                             <span class="number">03</span>
                             <div class="service-1-icon">
@@ -265,7 +265,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Potgrond.php" class="service-link">
                         <div class="service-1">
                             <span class="number">04</span>
                             <div class="service-1-icon">
@@ -280,7 +280,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Boomschors.php" class="service-link">
                         <div class="service-1">
                             <span class="number">05</span>
                             <div class="service-1-icon">
@@ -294,7 +294,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Graszaden.php" class="service-link">
                         <div class="service-1">
                             <span class="number">06</span>
                             <div class="service-1-icon">
@@ -308,7 +308,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Sproeistoffen.php" class="service-link">
                         <div class="service-1">
                             <span class="number">07</span>
                             <div class="service-1-icon">
@@ -323,7 +323,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Tuingereedschap.php" class="service-link">
                         <div class="service-1">
                             <span class="number">08</span>
                             <div class="service-1-icon">
@@ -338,7 +338,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Zaden_en_planten.php" class="service-link">
                         <div class="service-1">
                             <span class="number">09</span>
                             <div class="service-1-icon">
@@ -352,7 +352,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Laarzen_en_Jolly's.php" class="service-link">
                         <div class="service-1">
                             <span class="number">10</span>
                             <div class="service-1-icon">
@@ -366,7 +366,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Weide_afsluiting.php" class="service-link">
                         <div class="service-1">
                             <span class="number">11</span>
                             <div class="service-1-icon">
@@ -380,7 +380,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Antargaz.php" class="service-link">
                         <div class="service-1">
                             <span class="number">12</span>
                             <div class="service-1-icon">
@@ -395,7 +395,7 @@ include('include/header.php')
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <a href="#" class="service-link">
+                    <a href="./Houtpellets.php" class="service-link">
                         <div class="service-1">
                             <span class="number">13</span>
                             <div class="service-1-icon">
