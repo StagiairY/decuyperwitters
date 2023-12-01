@@ -19,16 +19,38 @@
                 </ul>
             </div>
             <div class="col-lg-4 mb-4">
-                <h3 class="footer-heading"><span>Onze Diensten</span></h3>
-                <ul class="list-unstyled">
-                    <li><a href="#">Mulchen</a></li>
-                    <li><a href="#">Ploegen</a></li>
-                    <li><a href="#">Planten</a></li>
-                    <li><a href="#">Watergeven</a></li>
-                    <li><a href="#">Zaaien</a></li>
-                </ul>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="footer-heading">Dieren</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="./Rundvee.php">Rundvee</a></li>
+                            <li><a href="./Paarden.php">Paarden</a></li>
+                            <li><a href="./Kleine_hoefdieren.php">Kleine hoefdieren</a></li>
+                            <li><a href="./Stalstrooisel.php">Stalstrooisel</a></li>
+                            <li><a href="./Neerhofdieren.php">Neerhofdieren</a></li>
+                            <li><a href="./Honden_en_katten.php">Honden en katten</a></li>
+                            <li><a href="./Duiven.php">Duiven</a></li>
+                            <li><a href="./Vogels.php">Vogels</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="footer-heading">Huis en Tuin</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="./Meststoffen.php">Meststoffen</a></li>
+                            <li><a href="./Potgrond.php">Potgrond</a></li>
+                            <li><a href="./Boomschors.php">Boomschors</a></li>
+                            <li><a href="./Graszaden.php">Graszaden</a></li>
+                            <li><a href="./Sproeistoffen.php">Sproeistoffen</a></li>
+                            <li><a href="./Tuingereedschap.php">Tuingereedschap</a></li>
+                            <li><a href="./Zaden_en_planten.php">Zaden en planten</a></li>
+                            <li><a href="./Laarzen_en_Jolly's.php">Laarzen en Jolly's</a></li>
+                            <li><a href="./Weide_afsluiting.php">Weide afsluiting</a></li>
+                            <li><a href="./Antargaz.php">Antargaz</a></li>
+                            <li><a href="./Houtpellets.php">Houtpellets</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-
         </div>
 
         <div class="row">
@@ -44,7 +66,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 

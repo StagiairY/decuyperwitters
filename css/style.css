@@ -1002,26 +1002,9 @@ h1, h2, h3, h4, h5,
   background: #000;
   font-size: 15px;
   color: #fff; }
-  .footer .footer-heading {
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 30px;
-    text-transform: uppercase; }
-    .footer .footer-heading > span {
-      border-bottom: 2px solid #ECB365; }
-  .footer ul li {
-    margin-bottom: 10px; }
-  .footer a {
-    color: #fff;
-    text-decoration: none; }
-    .footer a:hover {
-      color: #ECB365; }
-  .footer .copyright {
-    color: #fff;
-    text-align: center;
-    border-color: rgba(255, 255, 255, 0.2) !important; }
-    .footer .copyright a {
-      text-decoration: underline; }
+.footer * {
+  color: #fff;
+}
 
 .ftco-subscribe-1 {
   background-size: cover;
