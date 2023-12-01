@@ -16,7 +16,7 @@ include('include/header.php')
             <div class="col-md-8 offset-md-2">
                 <div class="card">
                     <div class="card-body">
-                        <h1 class="card-title"><a href="index.php#diensten">DIEREN / </a>VOGELVOEDERS</h1>
+                        <h1 ></a>VOGELVOEDERS</h1>
                         <h2>Beduco - Deli Nature</h2>
                         <p>Wij verkopen de zeer alom hoge kwaliteitszaden van Deli Nature, zowel enkelvoudige als Deli Nature als samengestelde mengelingen</p>
                         <p>Ook hebben wij onze eigen samengestelde mengelingen voor wilde- en natuurvogels<br>Verpakt in zakken van 1kg - 2.5kg - 5kg en volledige zakken van 15kg tot 20kg<br><br></p>

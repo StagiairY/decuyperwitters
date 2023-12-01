@@ -1,18 +1,12 @@
 <?php include('include/header.php'); ?>
 
-<div class="container pt-5">
-    <h1>Rundvee</h1>
 
-    <!-- HEADER / NAV CONTENT -->
-
-    <script type="text/javascript">strURL = "http://www.decuyperwitters.be";</script>
-
+<div class="container pt-5 mt-5">
     <div class="row">
         <div class="col-md-6">
             <h1>
-                <a href="index.php#diensten">Dieren / </a>
-                Rundvee</h1>
-
+                Rundvee
+            </h1>
             <p>MIJTEN en ROOSENS van enkelvoudige granen tot mengelingen</p>
 
             <h3>Krachtvoeders</h3>
@@ -55,15 +49,17 @@
         <div class="col-md-6">
             <div class="home-frame">
                 <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Rundvee.JPG">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Rundvee.JPG" alt="logo" width="200" data-pagespeed-url-hash="518803519" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                </a><br><br>
-                <img src="http://www.decuyperwitters.be/UPLOAD/2_roosens.JPG" alt="roosens.JPG" width="128" height="143" data-pagespeed-url-hash="3892906339" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"><br><br><br>
-                <img src="http://www.decuyperwitters.be/UPLOAD/2_mijten.JPG" alt="mijten.JPG" width="175" height="57" data-pagespeed-url-hash="3809513439" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Rundvee.JPG" alt="Rundvee" width="200">
+                </a>
+                <br><br>
+                <img src="http://www.decuyperwitters.be/UPLOAD/2_roosens.JPG" alt="roosens.JPG" width="128" height="143">
+                <br><br><br>
+                <img src="http://www.decuyperwitters.be/UPLOAD/2_mijten.JPG" alt="mijten.JPG" width="175" height="57">
             </div>
         </div>
     </div>
-
-    <!-- FOOTER CONTENT -->
 </div>
+
+
 
 <?php include('include/footer.php'); ?>

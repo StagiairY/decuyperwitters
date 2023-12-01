@@ -13,7 +13,7 @@ include('include/header.php')
 
 
     <div class="product-info">
-        <h1><a href="index.php#diensten">Dieren / </a> STALSTROOISELS </h1>
+        <h1>STALSTROOISELS </h1>
         <h2>HOUTVEZEL</h2>
         <ul style="list-style-type: disc;">
             <li>Zuivere en kiemvrije houtvezel van Qeen – span</li>

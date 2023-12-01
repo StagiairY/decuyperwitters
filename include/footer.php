@@ -28,17 +28,23 @@
                     <li><a href="#">Zaaien</a></li>
                 </ul>
             </div>
+
         </div>
-    </div>
-    <div class="container">
-        <div class="d-flex justify-content-between">
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center text-md-start mb-4">
-                <span> Developed &amp; Hosted by <a href="https://www.developmentspot.be/" style="color:#95aa7f;">Development Spot</a></span>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 text-center text-md-end credits">
-                © Copyright <span style="color:#95aa7f">De Cuyper Witter</span>. All Rights Reserved
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="d-flex justify-content-between">
+                    <div class="text-center text-md-start mb-4">
+                        <span>Developed &amp; Hosted by <a href="https://www.developmentspot.be/"
+                                                           style="color:#95aa7f;">Development Spot</a></span>
+                    </div>
+                    <div class="text-center text-md-end credits">
+                        © Copyright <span style="color:#95aa7f">De Cuyper Witter</span>. All Rights Reserved
+                    </div>
+                </div>
             </div>
         </div>
+
     </div>
 </div>
 

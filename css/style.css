@@ -1418,7 +1418,8 @@ h1, h2, h3, h4, h5,
   color: #000;
   font-weight: 700; }
 
-.testimonial .client-name {
+
+  .testimonial .client-name {
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -1606,3 +1607,9 @@ h1, h2, h3, h4, h5,
   padding-left: 30px; /* Add padding to the left of list items to make room for the image */
   margin-bottom: 10px; /* Adjust spacing between list items */
 }
+
+
+*{
+  font-family: Arial, Baskerville, monospace;
+}
+

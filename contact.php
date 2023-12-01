@@ -1,7 +1,7 @@
 <?php
 include('include/header.php')
     ?>
-    <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/part1/cows-grazing-around-farm.jpg');">
+    <div class=" pt-0 mt-0 intro-section site-blocks-cover innerpage" style="background-image: url('images/part1/cows-grazing-around-farm.jpg');">
       <div class="container">
         <div class="row align-items-center text-center">
           <div class="col-lg-12 mt-5" data-aos="fade-up">
@@ -16,8 +16,41 @@ include('include/header.php')
       </div>
     </div>
 
+
+    <style>/* CSS for the opening hours */
+        .opening-hours {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .opening-hours .day {
+            flex: 1;
+            font-weight: bold;
+        }
+
+        .opening-hours .hours {
+            flex: 2;
+        }
+
+        /* Optional: Style the headings and contact details */
+        .col-md-12 h3 {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+
+        .col-md-12 p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .col-md-12 p strong {
+            font-weight: bold;
+        }
+    </style>
+
     <div class="site-section">
-      <div class="container">
+      <div class="container pt-0 mt-0">
         <div class="row">
           <div class="col-lg-6">
             <div class="row">
@@ -42,8 +75,9 @@ include('include/header.php')
             </div>
             <div class="row">
               <div class="col-md-12 form-group">
+
                 <label for="message">Bericht</label>
-                <textarea name="" id="message" cols="30" rows="13" class="form-control"></textarea>
+                <textarea name="" id="message" cols="20" rows="5" class="form-control"></textarea>
               </div>
             </div>
 
@@ -53,59 +87,50 @@ include('include/header.php')
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-md-12">
-                <h3>Contactgegevens</h3>
-                <p><strong>Adres:</strong> Koningsbaan 40 - 2220 Heist-op-den-Berg</p>
-                <p><strong>Telefoon:</strong> <a href="tel:015233237" target="_blank">015.23.32.37</a></p>
-                <p><strong>E-mail:</strong> <a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></p>
-              </div>
+            <div class="col-lg-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Contactgegevens</h3>
+                        <p><strong>Adres:</strong> Koningsbaan 40 - 2220 Heist-op-den-Berg</p>
+                        <p><strong>Telefoon:</strong> <a href="tel:015233237" target="_blank">015.23.32.37</a></p>
+                        <p><strong>E-mail:</strong> <a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Openingsuren</h3>
+                        <div class="opening-hours">
+                            <div class="day">Maandag</div>
+                            <div class="hours">gesloten</div>
+                        </div>
+                        <div class="opening-hours">
+                            <div class="day">Dinsdag</div>
+                            <div class="hours">08:30 - 12:00 / 13:00 - 18:00</div>
+                        </div>
+                        <div class="opening-hours">
+                            <div class="day">Woensdag</div>
+                            <div class="hours">08:30 - 12:00 / 13:00 - 18:00</div>
+                        </div>
+                        <div class="opening-hours">
+                            <div class="day">Donderdag</div>
+                            <div class="hours">08:30 - 12:00 / 13:00 - 18:00</div>
+                        </div>
+                        <div class="opening-hours">
+                            <div class="day">Vrijdag</div>
+                            <div class="hours">08:30 - 12:00 / 13:00 - 18:00</div>
+                        </div>
+                        <div class="opening-hours">
+                            <div class="day">Zaterdag</div>
+                            <div class="hours">08:30 - 12:00</div>
+                        </div>
+                        <div class="opening-hours">
+                            <div class="day">Zondag en Feestdagen</div>
+                            <div class="hours">gesloten</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <h3>Openingsuren</h3>
-                <table class="table table-bordered">
-                  <thead>
-                  <tr>
-                    <th>Dag</th>
-                    <th>Uren</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr>
-                    <td>Maandag</td>
-                    <td>gesloten</td>
-                  </tr>
-                  <tr>
-                    <td>Dinsdag</td>
-                    <td>08:30 - 12:00 / 13:00 - 18:00</td>
-                  </tr>
-                  <tr>
-                    <td>Woensdag</td>
-                    <td>08:30 - 12:00 / 13:00 - 18:00</td>
-                  </tr>
-                  <tr>
-                    <td>Donderdag</td>
-                    <td>08:30 - 12:00 / 13:00 - 18:00</td>
-                  </tr>
-                  <tr>
-                    <td>Vrijdag</td>
-                    <td>08:30 - 12:00 / 13:00 - 18:00</td>
-                  </tr>
-                  <tr>
-                    <td>Zaterdag</td>
-                    <td>08:30 - 12:00</td>
-                  </tr>
-                  <tr>
-                    <td>Zondag en Feestdagen</td>
-                    <td>gesloten</td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>

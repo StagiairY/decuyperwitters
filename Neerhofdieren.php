@@ -7,7 +7,7 @@ include('include/header.php')
         <div class="col-md-8 offset-md-2">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="card-title"><a href="../dierenvoeding">Dieren</a> <img src="../IMG/icon-arrow-title.png" alt=">"> <strong>Neerhofdieren</strong></h1>
+                    <h1 ><strong>Neerhofdieren</strong></h1>
                     <p class="card-text">kippen – kalkoenen - eenden – struisvogels,…</p>
                     <h2>Voeders</h2>
                     <div class="table-responsive">

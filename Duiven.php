@@ -8,7 +8,7 @@ include('include/header.php')
         <div class="col-md-8 offset-md-2">
             <div class="card">
                 <div class="card-body">
-                    <h1 class="card-title"><a href="index.php#diensten">DIEREN / </a> DUIVENVOEDERS</h1>
+                    <h1 > DUIVENVOEDERS</h1>
                     <div class="product-tabel">
                         <div>
                             <div class="product-tabel-titel">Beduco</div>
