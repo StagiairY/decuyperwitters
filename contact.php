@@ -1,7 +1,7 @@
 <?php
 include('include/header.php')
     ?>
-    <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/hero_1.jpg');">
+    <div class="intro-section site-blocks-cover innerpage" style="background-image: url('images/part1/cows-grazing-around-farm.jpg');">
       <div class="container">
         <div class="row align-items-center text-center">
           <div class="col-lg-12 mt-5" data-aos="fade-up">
@@ -43,7 +43,7 @@ include('include/header.php')
             <div class="row">
               <div class="col-md-12 form-group">
                 <label for="message">Bericht</label>
-                <textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="" id="message" cols="30" rows="13" class="form-control"></textarea>
               </div>
             </div>
 

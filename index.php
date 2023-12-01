@@ -3,7 +3,7 @@ include('include/header.php')
 ?>
 
     <div class="hero-slide owl-carousel site-blocks-cover">
-        <div class="intro-section" style="background-image: url('images/part1/kippen.jpg');">
+        <div class="intro-section" style="background-image: url('images/part1/agronomist-gardener-holding-organic-healthy-fresh-salad-showing-agricultural-businessman-discussing-vegetables-nutrition-hydroponics-greenhouse-plantation-concept-agriculture.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
@@ -13,7 +13,7 @@ include('include/header.php')
             </div>
         </div>
 
-        <div class="intro-section" style="background-image: url('images/part1/groenten.jpg');">
+        <div class="intro-section" style="background-image: url('images/part1/top-view-female-hands-holding-soil-plant.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
@@ -24,7 +24,7 @@ include('include/header.php')
             </div>
         </div>
 
-        <div class="intro-section" style="background-image: url('images/part1/paarden.jpg');">
+        <div class="intro-section" style="background-image: url('images/part1/woman-holding-basket-full-different-vegetables.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
@@ -35,7 +35,7 @@ include('include/header.php')
             </div>
         </div>
 
-        <div class="intro-section" style="background-image: url('images/part1/tuinieren.jpg');">
+        <div class="intro-section" style="background-image: url('images/part1/farm-dedicated-producing-premium-chicken-goods.jpg');">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
@@ -47,49 +47,27 @@ include('include/header.php')
         </div>
     </div>
 
+<style>
+    .chcolor {
+        color: red;
+    }
+</style>
     <!-- END slider -->
 
 
-    <div class="site-section services-1-wrap">
+    <div id="diensten" class="site-section services-1-wrap">
         <div class="container">
             <div class="row mb-5 justify-content-center text-center">
                 <div class="col-lg-7">
-                    <h3 class="section-subtitle">Diensten - dieren</h3>
+                    <h3 class="section-subtitle">- dieren -</h3>
                 </div>
             </div>
             <div class="row no-gutters">
-                <div class="col-lg-3 col-md-6">
-                    <a href="./Planten.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">01</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/roots.png" alt="Afbeelding" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Planten</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <a href="./Dierenspeciaalzaak.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">02</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/smart-farm.png" alt="Afbeelding" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Dierenspeciaalzaak</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
                 <div class="col-lg-3 col-md-6">
                     <a href="./Rundvee.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">03</span>
+                            <span class="number">02</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/cow.png" alt="Afbeelding koe" class="img-fluid">
                             </div>
@@ -103,7 +81,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Paarden.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">04</span>
+                            <span class="number">03</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/horse.png" alt="Afbeelding paard" class="img-fluid">
                             </div>
@@ -117,7 +95,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Kleine_hoefdieren.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">05</span>
+                            <span class="number">04</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/sheep.png" alt="Afbeelding-shaap" class="img-fluid">
                             </div>
@@ -131,7 +109,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Stalstrooisel.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">06</span>
+                            <span class="number">05</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/hay.png" alt="Afbeelding-hooi" class="img-fluid">
                             </div>
@@ -145,7 +123,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Neerhofdieren.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">07</span>
+                            <span class="number">06</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/duck.png" alt="Afbeelding-eend" class="img-fluid">
                             </div>
@@ -159,7 +137,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Honden_en_katten.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">08</span>
+                            <span class="number">07</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/pets.png" alt="Afbeelding-cat-en-hond" class="img-fluid">
                             </div>
@@ -173,7 +151,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Duiven.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">09</span>
+                            <span class="number">08</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/pigeon.png" alt="Afbeelding-duif" class="img-fluid">
                             </div>
@@ -187,7 +165,7 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Vogels.php" class="service-link">
                         <div class="service-1">
-                            <span class="number">10</span>
+                            <span class="number">9</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/footprint.png" alt="Afbeelding-vogel-voetprint"
                                      class="img-fluid">
@@ -218,7 +196,7 @@ include('include/header.php')
         <div class="container">
             <div class="row mb-5 justify-content-center text-center">
                 <div class="col-lg-7">
-                    <h3 class="section-subtitle">Diensten - planten</h3>
+                    <h3 class="section-subtitle"> - huis en tuin -</h3>
                 </div>
             </div>
             <div class="row no-gutters">
@@ -231,20 +209,6 @@ include('include/header.php')
                             </div>
                             <div class="service-1-content">
                                 <h3 class="service-heading">Planten</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <a href="./Alles_voor_huis_en_tuin.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">02</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/garden.png" alt="Afbeelding-tuinhuis" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Alles voor huis en tuin</h3>
                                 <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
                             </div>
                         </div>

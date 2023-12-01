@@ -20,7 +20,7 @@ include('include/header.php');
     <div class="container">
         <div class="row mb-5 justify-content-center text-center">
             <div class="col-lg-7">
-                <h3 class="section-subtitle">Diensten - dieren</h3>
+                <h3 class="section-subtitle">- dieren -</h3>
             </div>
         </div>
         <div class="row no-gutters">
@@ -176,6 +176,8 @@ include('include/header.php');
         border: 2px solid #0c8010; /* Change border color on hover */
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
     }
+
+
 </style>
 
 
@@ -184,7 +186,7 @@ include('include/header.php');
     <div class="container">
         <div class="row mb-5 justify-content-center text-center">
             <div class="col-lg-7">
-                <h3 class="section-subtitle">Diensten - planten</h3>
+                <h3 class="section-subtitle">-huis en tuin-</h3>
             </div>
         </div>
         <div class="row no-gutters">

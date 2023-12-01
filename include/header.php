@@ -88,7 +88,7 @@
                             <span class="icon-phone text-primary"></span>
                         </div>
                         <div class="text">
-                            <span class="h6 d-block"><a href="tel:015233237" target="_blank">01523.32.37</a></span>
+                            <span class="h6 d-block"><a href="tel:015233237" target="_blank">015 233 237</a></span>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             <span class="icon-envelope text-primary"></span>
                         </div>
                         <div class="text">
-                            <span class="h6 d-block"><a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></span>
+                            <span class="h6 d-block" style="width: 280px;"><a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></span>
                         </div>
                     </div>
                 </div>
@@ -119,16 +119,19 @@ $current_page = basename($_SERVER['PHP_SELF']);
     <div class="container">
         <div class="d-flex align-items-center">
             <div class="mx-auto">
+
                 <nav class="site-navigation position-relative text-right" role="navigation">
+
                     <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+
                         <li class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">
                             <a href="index.php" class="nav-link text-left">Home</a>
                         </li>
                         <li class="<?php echo ($current_page == 'about.html') ? 'active' : ''; ?>">
                             <a href="about.html" class="nav-link text-left">Over ons</a>
                         </li>
-                        <li class="<?php echo ($current_page == 'diensten.php') ? 'active' : ''; ?>">
-                            <a href="diensten.php" class="nav-link text-left">diensten</a>
+                        <li class="<?php echo ($current_page == '#diensten') ? 'active' : ''; ?>">
+                            <a href="index.php#diensten" class="nav-link text-left">diensten</a>
                         </li>
                         <li class="<?php echo ($current_page == 'blog.html') ? 'active' : ''; ?>">
                             <a href="blog.html" class="nav-link text-left">Blog</a>

@@ -3,21 +3,17 @@ include('include/header.php')
 ?>
 <h1>Stalstrooisel</h1>
 
-<div id="main">
+<div class="container pt-5">
 
 
     <!-- HEADER / NAV CONTENT-->
-
-    <script type="text/javascript">strURL="http://www.decuyperwitters.be";</script>
-
-
 
 
 
 
 
     <div class="product-info">
-        <h1><a href="../dierenvoeding">DIEREN</a>&nbsp;<img src="../IMG/icon-arrow-title.png" alt=">" data-pagespeed-url-hash="310997228" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"> <strong>STALSTROOISELS</strong></h1>
+        <h1><a href="index.php#diensten">Dieren / </a> STALSTROOISELS </h1>
         <h2>HOUTVEZEL</h2>
         <ul style="list-style-type: disc;">
             <li>Zuivere en kiemvrije houtvezel van Qeen – span</li>

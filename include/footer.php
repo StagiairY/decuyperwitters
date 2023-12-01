@@ -3,7 +3,8 @@
         <div class="row mb-4">
             <div class="col-lg-4 mb-4">
                 <p class="mb-4"><img src="../images/part1/decuyperwitters.png" alt="Afbeelding" class="img-fluid"></p>
-                <p>De Cuyper Witters uit Heist-op-den-Berg is uw specialist voor alles op het gebied van dier en tuin. Wij bieden een breed scala aan producten en professioneel advies.</p>
+                <p>De Cuyper Witters uit Heist-op-den-Berg is uw specialist voor alles op het gebied van dier en tuin.
+                    Wij bieden een breed scala aan producten en professioneel advies.</p>
                 <p><a href="#">Lees Meer</a></p>
             </div>
             <div class="col-lg-4 mb-4">
@@ -42,10 +43,14 @@
 </div>
 
 
-
-
 <!-- loader -->
-<div id="loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#116530"/></svg></div>
+<div id="loader" class="show fullscreen">
+    <svg class="circular" width="60px" height="60px">
+        <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+        <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+                stroke="#116530"/>
+    </svg>
+</div>
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -61,8 +66,6 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
-
-
 
 
 <script src="js/main.js"></script>
