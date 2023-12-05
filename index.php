@@ -54,6 +54,14 @@ include('include/header.php')
 
     <style>
 
+        /* CSS for hover effect */
+        .service-link:hover .service-1 {
+            /* Add your hover styles here */
+            border: 2px solid #0c8010; /* Change border color on hover */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
+        }
+
+
         @media (min-width: 768px) {
             .backgroundDrop {
                 background-color: rgba(17, 107, 48, 0.3);
@@ -98,12 +106,106 @@ include('include/header.php')
             .service-link:hover .service-1 {
                 border: 2px solid #0c8010;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                z-index: 2;
             }
         }
+
+
+
+
+        /* CSS for the section container */
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* CSS for the section links */
+        .section-link {
+            text-decoration: none;
+            color: #333; /* Change the text color as needed */
+            text-align: center;
+            flex-grow: 1;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* CSS for the section background images */
+        .section-bg {
+            transform: scale(1.02);
+            width: 100%;
+            height: 600px;
+            background-size: cover;
+            background-position: center;
+            transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+            filter: blur(5px); /* Initial blur value, adjust as needed */
+            color:white;
+        }
+
+        /* CSS for the section links */
+        .section-link:hover .section-bg {
+            transform: scale(1); /* Zoom out to original size */
+            filter: blur(0); /* Remove blur on hover */
+        }
+
+
+
+        /* CSS for the "Dieren" section background */
+        .section-dieren {
+            background-image: url('images/part1/animal_lamb.jpg');
+        }
+
+        /* CSS for the "Huis en Tuin" section background */
+        .section-huis-en-tuin {
+            background-image: url('images/part1/beautiful-woman-works-garden-near-house.jpg');
+        }
+
+        /* CSS for the section title */
+        .section-title-custom {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(3, 101, 18, 0.8);
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.2s ease-in-out;
+        }
+
+        /* CSS for hover effect on section link */
+        .section-link:hover {
+            transform: scale(1.05);
+            z-index: 1;
+
+        }
+
+        /* CSS for hover effect on section title */
+        .section-link:hover .section-title {
+            background: rgba(255, 255, 255, 1);
+            color: #0a391b;
+        }
+
+
+
     </style>
 
 
-    <div id="diensten" class="site-section services-1-wrap ">
+
+
+    <div id="diensten" class="section-container">
+        <a href="#dieren" class="section-link">
+            <div class="section-bg section-dieren"></div>
+            <h3 class="section-title section-title-custom ">Dieren</h3>
+        </a>
+        <a href="#huis-en-tuin" class="section-link">
+            <div class="section-bg section-huis-en-tuin"></div>
+            <h3 class="section-title section-title-custom ">Huis en Tuin</h3>
+        </a>
+    </div>
+
+
+    <!--Dieren Summary-->
+    <div id="dieren" class="site-section services-1-wrap ">
         <div class="container">
             <div class="row mb-5 justify-content-center text-center">
                 <div class="col-lg-7">
@@ -228,18 +330,11 @@ include('include/header.php')
         </div>
     </div>
 
-    <style>
-        /* CSS for hover effect */
-        .service-link:hover .service-1 {
-            /* Add your hover styles here */
-            border: 2px solid #0c8010; /* Change border color on hover */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add box shadow on hover */
-        }
-    </style>
 
 
-    <!--einde DIEREN-->
-    <div id="diensten-tuin" class="bg2 site-section services-1-wrap">
+
+    <!--huis en tuin-->
+    <div id="huis-en-tuin" class="bg2 site-section services-1-wrap">
         <div class="container">
             <div class="row mb-5 justify-content-center text-center">
                 <div class="col-lg-7">
@@ -410,7 +505,7 @@ include('include/header.php')
     </div>
 
 
-    <!-- EINDE diensten -->
+
 
 
     <div class="site-section pb-0">
