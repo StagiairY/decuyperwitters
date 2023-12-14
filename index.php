@@ -206,7 +206,7 @@ include('include/header.php')
 
 
     <!--Dieren Summary-->
-    <div id="dieren" class="site-section services-1-wrap ">
+    <div id="dieren" class="site-section services-1-wrap">
         <div class="container">
             <div class="row mb-5 justify-content-center text-center">
                 <div class="col-lg-7">
@@ -216,113 +216,80 @@ include('include/header.php')
             <div class="row no-gutters">
                 <div class="col-lg-3 col-md-6">
                     <a href="./Rundvee.php" class="service-link">
-                        <div class="service-1 backgroundDrop" style=" background-image: url('images/part1/12699097_Group happy farmers keeping cow and poultry.jpg')">
-                            <span class="number">01</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/cow.png" alt="Afbeelding koe" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Rundvee</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/cows-producing-milk-gruyere-cheese-france-spring.jpg" class="card-img-top p-3" alt="Rundvee Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Rundvee</h5>
                             </div>
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-3 col-md-6 ">
+                <div class="col-lg-3 col-md-6">
                     <a href="./Paarden.php" class="service-link">
-                        <div class="service-1 ">
-                            <span class="number">02</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/horse.png" alt="Afbeelding paard" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Paarden</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/horse-alezan-brown-ride-mane.jpg" class="card-img-top p-3" alt="Paarden Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Paarden</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Kleine_hoefdieren.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">03</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/sheep.png" alt="Afbeelding-shaap" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Kleine hoefdieren</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/sheep.jpg" class="card-img-top p-3" alt="Kleine hoefdieren Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Kleine hoefdieren</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Stalstrooisel.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">04</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/hay.png" alt="Afbeelding-hooi" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Stalstrooisel</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/hay-bedding.jpg" class="card-img-top p-3" alt="Stalstrooisel Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Stalstrooisel</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Neerhofdieren.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">05</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/duck.png" alt="Afbeelding-eend" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Neerhofdieren</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/chicken-walking-middle-field.jpg" class="card-img-top p-3" alt="Neerhofdieren Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Neerhofdieren</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Honden_en_katten.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">06</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/pets.png" alt="Afbeelding-cat-en-hond" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Honden en katten</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/cat-dog-lie-together-floor.jpg" class="card-img-top p-3" alt="Honden en katten Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Honden en katten</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Duiven.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">07</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/pigeon.png" alt="Afbeelding-duif" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Duiven</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/two-piggeons-sitting-stone-fence-park.jpg" class="card-img-top p-3" alt="Duiven Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Duiven</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Vogels.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">08</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/footprint.png" alt="Afbeelding-vogel-voetprint"
-                                     class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Vogels</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/olivebacked-sunbirds-feeding-child.jpg" class="card-img-top p-3" alt="Vogels Image" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Vogels</h5>
                             </div>
                         </div>
                     </a>
@@ -330,6 +297,10 @@ include('include/header.php')
             </div>
         </div>
     </div>
+
+
+
+
 
 
 
@@ -345,158 +316,110 @@ include('include/header.php')
             <div class="row no-gutters">
                 <div class="col-lg-3 col-md-6">
                     <a href="./Meststoffen.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">01</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/npk.png" alt="Afbeelding-meststof" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Meststoffen</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/applying-fertilizer-big-green-beautiful-bush-flowers-before-bloom.jpg" class="card-img-top p-3" alt="Afbeelding-meststof" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Meststoffen</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Potgrond.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">02</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/shovel.png" alt="Afbeelding-schep-potgrond"
-                                     class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Potgrond</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/hand-holding-peat-moss-organic-matter-improve-soil-agriculture-organic-plant-growing-ecology-concept.jpg" class="card-img-top p-3" alt="Afbeelding-schep-potgrond" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Potgrond</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Boomschors.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">03</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/bark.png" alt="Afbeelding-boom-schors" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Boomschors</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/beautiful-macro-wood-concept.jpg" class="card-img-top p-3" alt="Afbeelding-boom-schors" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Boomschors</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Graszaden.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">04</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/grass.png" alt="Afbeelding-grass" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Graszaden</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/wheat-grain-female-hand-green-grass-background.jpg" class="card-img-top p-3" alt="Afbeelding-grass" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Graszaden</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Sproeistoffen.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">05</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/fertilizer.png" alt="Afbeelding-spray-fertilizer"
-                                     class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Sproeistoffen</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron.jpg" class="card-img-top p-3" alt="Afbeelding-spray-fertilizer" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Sproeistoffen</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Tuingereedschap.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">06</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/garden-tools.png" alt="Afbeelding-garden-tools"
-                                     class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Tuingereedschap</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/row-gardening-tools-soil-background.jpg" class="card-img-top p-3" alt="Afbeelding-garden-tools" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Tuingereedschap</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Zaden_en_planten.php" class="service-link">
-                        <div class="service-1">
-                            <span class="number">07</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/seeds.png" alt="Afbeelding-seeds" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Zaden en planten</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/close-up-picture-hand-holding-planting-seed-plant.jpg" class="card-img-top p-3" alt="Afbeelding-seeds" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Zaden en planten</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Laarzen_en_Jolly's.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">08</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/boots.png" alt="Afbeelding-laarzen" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Laarzen en Jolly's</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/close-up-gardening-accesories.jpg" class="card-img-top p-3" alt="Afbeelding-laarzen" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Laarzen en Jolly's</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Weide_afsluiting.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">09</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/fence.png" alt="fence" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Weide afsluiting</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/wooden-fence.jpg" class="card-img-top p-3" alt="fence" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Weide afsluiting</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Antargaz.php" class="service-link">
-                        <div class="service-1 ">
-                            <span class="number">10</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/propane.png" alt="Afbeelding-propane-fles"
-                                     class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Antargaz</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/man-holding-bottle-butane-gas-red-background.jpg" class="card-img-top p-3" alt="Afbeelding-propane-fles" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Antargaz</h5>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <a href="./Houtpellets.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
-                            <span class="number">11</span>
-                            <div class="service-1-icon">
-                                <img src="images/part1/Icons/wood.png" alt="Afbeelding-hout" class="img-fluid">
-                            </div>
-                            <div class="service-1-content">
-                                <h3 class="service-heading">Houtpellets</h3>
-                                <p>Gravida sodales condimentum pellen tesq accumsan orci quam sagittis sapie</p>
+                        <div class="card">
+                            <img src="images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg" class="card-img-top p-3" alt="Afbeelding-hout" style="background-color: beige;">
+                            <div class="card-body">
+                                <h5 class="card-title">Houtpellets</h5>
                             </div>
                         </div>
                     </a>
