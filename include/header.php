@@ -35,76 +35,59 @@
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-<style>
-    /* Default font size */
-    body {
-        font-size: 16px;
-    }
 
-    /* Responsive font size adjustments */
-    @media (max-width: 768px) {
-        body {
-            font-size: 14px; /* Adjust font size for smaller screens */
-        }
-    }
-
-    @media (max-width: 576px) {
-        body {
-            font-size: 12px; /* Further adjust font size for even smaller screens */
-        }
-    }
-</style>
-
-<div class="site-wrap">
+<div class="site-wrap ">
     <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
-            <div class="site-mobile-menu-close mt-3 text-right"> <!-- Add "text-right" class here -->
+            <div class="site-mobile-menu-close mt-3 text-right">
                 <span class="icon-close2 js-menu-toggle"></span>
             </div>
         </div>
         <div class="site-mobile-menu-body"></div>
     </div>
-
-
-    <div class="header-top bg-light">
+    <div class="header-top bg-white text-dark py-0 ">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-4 d-none d-lg-block">
+                <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="quick-contact-icons d-flex align-items-center">
-                        <div class="icon align-self-center ">
+                        <div class="icon align-self-center">
                             <i class="fas fa-map-marker-alt text-primary"></i>
                         </div>
                         <div class="text">
-                            <span class="h6 d-block" style="width: ;">Koningsbaan 40 - 2220 Heist-op-den-Berg</span>
+                            <span class="h6 d-block" style="font-size: 12px;">Koningsbaan 40 - 2220 Heist-op-den-Berg</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-3 col-md-6 col-sm-12 mt-3 mt-md-0">
                     <div class="quick-contact-icons d-flex align-items-center">
-                        <div class="icon align-self-center ">
+                        <div class="icon align-self-center">
                             <i class="fas fa-phone text-primary"></i>
                         </div>
                         <div class="text">
-                            <span class="h6 d-block"><a href="tel:015233237" target="_blank">015 233 237</a></span>
+                            <span class="h6 d-block" style="font-size: 12px;"><a href="tel:015233237" target="_blank" class="text-dark">015 233 237</a></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-2 d-none d-lg-block">
+                <div class="col-lg-5 col-md-12 mt-3 mt-lg-0">
                     <div class="quick-contact-icons d-flex align-items-center">
-                        <div class="icon align-self-center ">
+                        <div class="icon align-self-center">
                             <i class="fas fa-envelope text-primary"></i>
                         </div>
                         <div class="text">
-                            <span class="h6 d-block" style="width: 280px;"><a href="mailto:decuyper-gilbert@hotmail.com" target="_blank">decuyper-gilbert@hotmail.com</a></span>
+                            <span class="h6 d-block" style="font-size: 12px;"><a href="mailto:decuyper-gilbert@hotmail.com" target="_blank" class="text-dark">decuyper-gilbert@hotmail.com</a></span>
                         </div>
                     </div>
                 </div>
                 <div class="col-6 d-block d-lg-none text-right">
-                    <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><i class="fas fa-bars fa-2x"></i></a>
+                    <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-dark">
+                        <i class="fas fa-bars fa-2x"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
+
 
 
 
