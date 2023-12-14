@@ -17,8 +17,6 @@
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- If you need a specific version, uncomment the line below -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-jJ3DJk7fZgIbdzT/baVTIu7ZfSxFKTRSDzLfeF+3fJkuE03qQq3w+nlM1z/wYfTtMa8ezPe1zG4D+YeKdAM+rw==" crossorigin="anonymous" />
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="fonts/icomoon/style.css">
@@ -33,6 +31,7 @@
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="css/aos.css">
     <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
+
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -104,8 +103,9 @@
 
 
 <div class="site-wrap">
-    <div class="site-mobile-menu site-navbar-target">
-        <div class="site-mobile-menu-header">
+    <div class=" site-mobile-menu site-navbar-target">
+        <div class="bg-primary site-mobile-menu-header ">
+            <img src="/images/part1/decuyperwitters.png" alt="">
             <div class="site-mobile-menu-close mt-3 text-right">
                 <span class="icon-close2 js-menu-toggle"></span>
             </div>
