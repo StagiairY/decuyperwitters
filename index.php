@@ -2,6 +2,8 @@
 include('include/header.php')
 ?>
 
+
+
     <div class="hero-slide owl-carousel site-blocks-cover pt-0 mt-0">
         <div class="intro-section"
              style="background-image: url('images/part1/agronomist-gardener-holding-organic-healthy-fresh-salad-showing-agricultural-businessman-discussing-vegetables-nutrition-hydroponics-greenhouse-plantation-concept-agriculture.jpg');">
@@ -212,7 +214,7 @@ include('include/header.php')
 
     <!--Dieren Summary-->
     <div id="dieren" class="site-section services-1-wrap">
-        <div class="container">
+        <div id="diensten" class="container">
             <div class="row mb-5 justify-content-center text-center">
                 <div class="col-lg-7">
                     <h3 class="section-subtitle">- dieren -</h3>
@@ -497,6 +499,7 @@ include('include/header.php')
             </div>
         </div>
     </div>
+
 
     <!-- END block-2 -->
 

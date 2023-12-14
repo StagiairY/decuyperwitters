@@ -46,10 +46,12 @@
         }
 
 
+
+
 </style>
 
 
-<body >
+<body>
 
 <div class="custom-header hideNow">
     <div class="custom-header-top bg-white text-dark py-2 py-md-0">
@@ -60,9 +62,8 @@
                         <div class="custom-icon align-self-center">
                             <i class="fas fa-map-marker-alt text-primary"></i>
                         </div>
-                        <div class="custom-text">
-                            <span class="h6 d-block"
-                                  style="font-size: 12px;">Koningsbaan 40 - 2220 Heist-op-den-Berg</span>
+                        <div class="custom-text ml-3">
+                            <span class="h6 d-block" style="font-size: 12px;">Koningsbaan 40 - 2220 Heist-op-den-Berg</span>
                         </div>
                     </div>
                 </div>
@@ -71,7 +72,7 @@
                         <div class="custom-icon align-self-center">
                             <i class="fas fa-phone text-primary"></i>
                         </div>
-                        <div class="custom-text">
+                        <div class="custom-text ml-3">
                             <span class="h6 d-block" style="font-size: 12px;"><a href="tel:015233237" target="_blank"
                                                                                  class="text-dark">015 233 237</a></span>
                         </div>
@@ -82,7 +83,7 @@
                         <div class="custom-icon align-self-center">
                             <i class="fas fa-envelope text-primary"></i>
                         </div>
-                        <div class="custom-text">
+                        <div class="custom-text ml-3"> <!-- Added margin to align text with icon -->
                             <span class="h6 d-block" style="font-size: 12px;"><a
                                         href="mailto:decuyper-gilbert@hotmail.com" target="_blank" class="text-dark">decuyper-gilbert@hotmail.com</a></span>
                         </div>
@@ -92,6 +93,7 @@
         </div>
     </div>
 </div>
+
 
 <div class="custom-header">
     <div class="col-6 d-block d-lg-none text-left"> <!-- Added float-left class -->
