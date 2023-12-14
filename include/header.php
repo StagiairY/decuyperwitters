@@ -3,36 +3,39 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>De Cuyper Witter</title>
     <link rel="shortcut icon" href="favicon.png">
-    <meta name="keywords" content="bootstrap, bootstrap4"/>
 
+    <!-- Meta Tags -->
+    <meta name="keywords" content="bootstrap, bootstrap4" />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Slabo+27px&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
-    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <!-- CSS Libraries -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-
     <link rel="stylesheet" href="css/jquery.fancybox.min.css">
-
     <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-
-    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
-
     <link rel="stylesheet" href="css/aos.css">
     <link href="css/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
 
+    <!-- Main Styles -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title>De Cuyper Witter</title>
-
 </head>
+
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 

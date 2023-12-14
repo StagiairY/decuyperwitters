@@ -1,14 +1,29 @@
-<div class="footer">
+
+<footer class="site-footer">
     <div class="container">
-        <div class="row mb-4">
-            <div class="col-lg-4 mb-4">
-                <p class="mb-4"><img src="../images/part1/decuyperwitters.png" alt="Afbeelding" class="img-fluid"></p>
-                <p>De Cuyper Witters uit Heist-op-den-Berg is uw specialist voor alles op het gebied van dier en tuin.
-                    Wij bieden een breed scala aan producten en professioneel advies.</p>
-                <p><a href="#">Lees Meer</a></p>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">De Cuyper Witters uit Heist-op-den-Berg is uw specialist voor alles op het gebied van dier en tuin.
+                    Wij bieden een breed scala aan producten en professioneel advies</p>
             </div>
-            <div class="col-lg-4 mb-4">
-                <h3 class="footer-heading"><span>Ons Bedrijf</span></h3>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="list-unstyled">
+                    <li><a href="./Rundvee.php">Rundvee</a></li>
+                    <li><a href="./Paarden.php">Paarden</a></li>
+                    <li><a href="./Kleine_hoefdieren.php">Kleine hoefdieren</a></li>
+                    <li><a href="./Stalstrooisel.php">Stalstrooisel</a></li>
+                    <li><a href="./Neerhofdieren.php">Neerhofdieren</a></li>
+                    <li><a href="./Honden_en_katten.php">Honden en katten</a></li>
+                    <li><a href="./Duiven.php">Duiven</a></li>
+                    <li><a href="./Vogels.php">Vogels</a></li>
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Quick Links</h6>
                 <ul class="list-unstyled">
                     <li><a href="#">Over Ons</a></li>
                     <li><a href="#">Nieuws</a></li>
@@ -18,56 +33,30 @@
                     <li><a href="#">Projecten</a></li>
                 </ul>
             </div>
-            <div class="col-lg-4 mb-4">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="footer-heading">Dieren</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="./Rundvee.php">Rundvee</a></li>
-                            <li><a href="./Paarden.php">Paarden</a></li>
-                            <li><a href="./Kleine_hoefdieren.php">Kleine hoefdieren</a></li>
-                            <li><a href="./Stalstrooisel.php">Stalstrooisel</a></li>
-                            <li><a href="./Neerhofdieren.php">Neerhofdieren</a></li>
-                            <li><a href="./Honden_en_katten.php">Honden en katten</a></li>
-                            <li><a href="./Duiven.php">Duiven</a></li>
-                            <li><a href="./Vogels.php">Vogels</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="footer-heading">Huis en Tuin</h4>
-                        <ul class="list-unstyled">
-                            <li><a href="./Meststoffen.php">Meststoffen</a></li>
-                            <li><a href="./Potgrond.php">Potgrond</a></li>
-                            <li><a href="./Boomschors.php">Boomschors</a></li>
-                            <li><a href="./Graszaden.php">Graszaden</a></li>
-                            <li><a href="./Sproeistoffen.php">Sproeistoffen</a></li>
-                            <li><a href="./Tuingereedschap.php">Tuingereedschap</a></li>
-                            <li><a href="./Zaden_en_planten.php">Zaden en planten</a></li>
-                            <li><a href="./Laarzen_en_Jolly's.php">Laarzen en Jolly's</a></li>
-                            <li><a href="./Weide_afsluiting.php">Weide afsluiting</a></li>
-                            <li><a href="./Antargaz.php">Antargaz</a></li>
-                            <li><a href="./Houtpellets.php">Houtpellets</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
         </div>
-
+        <hr>
+    </div>
+    <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="d-flex justify-content-between">
-                    <div class="text-center text-md-start mb-4">
-                        <span>Developed &amp; Hosted by <a href="https://www.developmentspot.be/"
-                                                           style="color:#95aa7f;">Development Spot</a></span>
-                    </div>
-                    <div class="text-center text-md-end credits">
-                        © Copyright <span style="color:#95aa7f">De Cuyper Witter</span>. All Rights Reserved
-                    </div>
-                </div>
+            <div class="col-md-8 col-sm-6 col-xs-12">
+                 <span>Developed &amp; Hosted by <a href="https://www.developmentspot.be/"
+                                                    style="color:#95aa7f;">Development Spot</a></span>
+                <p class="copyright-text">Copyright &copy; 2017 All Rights Reserved by
+                    <a href="#" style="color:#95aa7f;">De Cuyper Witter</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
             </div>
         </div>
     </div>
-</div>
+</footer>
 
 
 <!-- loader -->

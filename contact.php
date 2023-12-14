@@ -76,11 +76,11 @@ include('include/header.php')
 
 
                     <!-- Openingsuren met accenten -->
-                    <div class="card border-success mb-3">
-                        <div class="card-header bg-success text-white">Openingsuren</div>
-                        <div class="card-body text-success">
+                    <div class="card border-primary mb-3">
+                        <div class="card-header bg-primary text-white">Openingsuren</div>
+                        <div class="card-body text-primary">
                             <h5 class="card-title">Wij zijn geopend op:</h5>
-                            <ul class="list-unstyled">
+                            <ul class="list-unstyled card-text">
                                 <li><strong>Maandag:</strong> gesloten</li>
                                 <li><strong>Dinsdag:</strong> 08:30 - 12:00 / 13:00 - 18:00</li>
                                 <li><strong>Woensdag:</strong> 08:30 - 12:00 / 13:00 - 18:00</li>
