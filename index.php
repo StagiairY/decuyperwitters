@@ -75,7 +75,7 @@ include('include/header.php')
 
                 margin: 5px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-                border-radius: 20%;
+                border-radius: 0%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -86,7 +86,8 @@ include('include/header.php')
 
             .service-1:hover {
                 z-index: 99;
-                transform: scale(1.1);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+                /*transform: scale(1.1);*/
             }
 
         }
@@ -168,7 +169,7 @@ include('include/header.php')
             transform: translate(-50%, -50%);
             background: rgba(3, 101, 18, 0.8);
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 1px;
             transition: background 0.2s ease-in-out;
         }
 
@@ -192,16 +193,16 @@ include('include/header.php')
 
 
 
-    <div id="diensten" class="section-container">
-        <a href="#dieren" class="section-link">
-            <div class="section-bg section-dieren"></div>
-            <h3 class="section-title section-title-custom ">Dieren</h3>
-        </a>
-        <a href="#huis-en-tuin" class="section-link">
-            <div class="section-bg section-huis-en-tuin"></div>
-            <h3 class="section-title section-title-custom ">Huis en Tuin</h3>
-        </a>
-    </div>
+<!--    <div id="diensten" class="section-container">-->
+<!--        <a href="#dieren" class="section-link">-->
+<!--            <div class="section-bg section-dieren"></div>-->
+<!--            <h3 class="section-title section-title-custom ">Dieren</h3>-->
+<!--        </a>-->
+<!--        <a href="#huis-en-tuin" class="section-link">-->
+<!--            <div class="section-bg section-huis-en-tuin"></div>-->
+<!--            <h3 class="section-title section-title-custom ">Huis en Tuin</h3>-->
+<!--        </a>-->
+<!--    </div>-->
 
 
     <!--Dieren Summary-->
@@ -215,7 +216,7 @@ include('include/header.php')
             <div class="row no-gutters">
                 <div class="col-lg-3 col-md-6">
                     <a href="./Rundvee.php" class="service-link">
-                        <div class="service-1 backgroundDrop">
+                        <div class="service-1 backgroundDrop" style=" background-image: url('images/part1/12699097_Group happy farmers keeping cow and poultry.jpg')">
                             <span class="number">01</span>
                             <div class="service-1-icon">
                                 <img src="images/part1/Icons/cow.png" alt="Afbeelding koe" class="img-fluid">
