@@ -26,7 +26,7 @@ include('include/header.php')
                 </ul>
                 <h2>Meer info nodig?</h2>
                 <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a
-                            href="http://www.decuyperwitters.be/contact-tuincentrum-mechelen">contactpagina</a></p>
+                            href="contact.php">contactpagina</a></p>
             </div>
             <div class="col-md-6">
                 <div class="home-frame">
