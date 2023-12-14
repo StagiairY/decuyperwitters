@@ -1648,33 +1648,6 @@ h1, h2, h3, h4, h5,
     border-right: 1px solid #efefef;
 }
 
-.header-top > .container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-}
-
-.header-top .quick-contact-icons .icon {
-    margin-right: 10px;
-}
-
-.header-top .quick-contact-icons .icon span {
-    font-size: 40px;
-    line-height: 0;
-}
-
-.header-top .quick-contact-icons .text {
-    line-height: 1;
-}
-
-.header-top .quick-contact-icons .text .h4 {
-    font-size: 15px;
-    color: #000;
-    margin-bottom: 0;
-}
-
-.header-top .quick-contact-icons .text .caption-text {
-    font-size: 13px;
-}
 
 .block-2 {
     background: #116530;

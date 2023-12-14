@@ -3,20 +3,31 @@ include('include/header.php')
 ?>
 
 
+    <div class=" pt-0 mt-0 intro-section site-blocks-cover innerpage"
+         style="height: 600px; background-image: url('images/part1/mature-caucasian-woman-picking-up-fresh-eggs-inside-henhouse.jpg');">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-lg-12 mt-5" data-aos="fade-up">
+                    <h1>Over Ons</h1>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
       
-      <div class="intro-section site-blocks-cover innerpage" style="height: 600px; background-image: url('images/part1/mature-caucasian-woman-picking-up-fresh-eggs-inside-henhouse.jpg');">
-        <div class="container">
-          <div class="row align-items-center text-center">
-            <div class="col-lg-12 mt-5" data-aos="fade-up">
-              <h1>About Us</h1>
-              <p class="text-white text-center">
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+<!--      <div class="intro-section site-blocks-cover innerpage" style="height: 600px; background-image: url('images/part1/mature-caucasian-woman-picking-up-fresh-eggs-inside-henhouse.jpg');">-->
+<!--        <div class="container">-->
+<!--          <div class="row align-items-center text-center">-->
+<!--            <div class="col-lg-12 mt-5" data-aos="fade-up">-->
+<!--              <h1>About Us</h1>-->
+<!--              <p class="text-white text-center">-->
+<!--              </p>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
 
 
     <div class="site-section">
@@ -25,22 +36,23 @@ include('include/header.php')
                 <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
                     <a data-fancybox href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="video-1">
                         <span class="play"><span class="icon-play"></span></span>
-                        <img src="images/img_sq_1.jpg" alt="Afbeelding" class="img-fluid">
+                        <img src="images/part1/farm-dedicated-producing-premium-chicken-goods.jpg" alt="Afbeelding" class="img-fluid rounded shadow">
                     </a>
                 </div>
                 <div class="col-lg-5 order-lg-1">
-                    <h2 class="text-primary mb-4">Decuyperswitters: Uw Partner voor Kwaliteitsboerderijbenodigdheden</h2>
-                    <p class="mb-4">Bij Decuyperswitters streven we ernaar om uw landbouwervaring te verbeteren. Onze hoogwaardige producten zijn speciaal ontworpen om uw boerderijtaken gemakkelijker te maken en uw gewassen te optimaliseren. Met jarenlange expertise in de sector kunt u vertrouwen op onze toewijding aan kwaliteit en innovatie.</p>
-                    <ul class="list-unstyled ul-check primary">
-                        <li>We leveren de beste landbouwproducten</li>
-                        <li>Optimaliseer uw gewasopbrengst met onze hulpmiddelen</li>
-                        <li>Decuyperswitters staat voor kwaliteit en betrouwbaarheid</li>
+                    <h2 class="text-primary font-weight-bold mb-4">Decuyperswitters: Uw Partner voor Kwaliteitsboerderijbenodigdheden</h2>
+                    <p class="lead mb-4">Bij Decuyperswitters streven we ernaar om uw landbouwervaring te verbeteren. Onze hoogwaardige producten zijn speciaal ontworpen om uw boerderijtaken gemakkelijker te maken en uw gewassen te optimaliseren. Met jarenlange expertise in de sector kunt u vertrouwen op onze toewijding aan kwaliteit en innovatie.</p>
+                    <ul class="list-unstyled primary">
+                        <li><i class="fas fa-check text-primary"></i> We leveren de beste landbouwproducten</li>
+                        <li><i class="fas fa-check text-primary"></i> Optimaliseer uw gewasopbrengst met onze hulpmiddelen</li>
+                        <li><i class="fas fa-check text-primary"></i> Decuyperswitters staat voor kwaliteit en betrouwbaarheid</li>
                     </ul>
                     <p><a href="contact.php" class="btn btn-primary">Neem contact op</a></p>
                 </div>
             </div>
         </div>
     </div>
+
 
 
 

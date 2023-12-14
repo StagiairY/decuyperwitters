@@ -82,6 +82,8 @@
 <script src="js/jquery.fancybox.min.js"></script>
 <script src="js/jquery.sticky.js"></script>
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="path/to/bootstrap.bundle.min.js"></script>
+<script src="path/to/popper.min.js"></script>
 
 
 <script src="js/main.js"></script>

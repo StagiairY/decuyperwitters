@@ -1,5 +1,7 @@
-<style>
 
+<link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.4/dist/simplebar.min.css" integrity="sha384-MnvblLAArJ5rzSOlqq08iuTR+8oiglvMR0IcKA6YgU0IvGuTNo9XgOu0tF1mybPJ" crossorigin="anonymous">
+
+<style>
     /* Styles for sub-navigation container */
     .sub-navigation-container {
         width: 100%;
@@ -9,33 +11,27 @@
     /* Styles for sub-navigation */
     .sub-navigation {
         white-space: nowrap;
-        width: 100%;
         overflow: hidden;
-        margin-bottom: -20px; /* Negative margin to hide scrollbar */
-        padding-bottom: 20px; /* Adjust for negative margin */
+        padding: 10px;
+        display: flex;
     }
 
     .sub-nav-item {
-        display: inline-block;
-        padding: 10px 20px;
-        text-decoration: none;
+        padding: 10px;
         color: #333;
-        font-weight: bold;
-        font-size: 16px;
-        margin-right: 20px;
+        font-size: 12px;
+        text-decoration: none;
+        transition: font-size 0.3s ease;
     }
 
     .sub-nav-item:hover {
-        transform: scale(1.1); /* Enlarge on hover */
-        font-size: 18px; /* Enlarge font on hover */
+        font-size: 13px;
     }
-
 </style>
 
-<div class="sub-navigation mt-5 pt-5">
-    <div class="sub-nav-container">
-        <div class="sub-nav">
-            <!-- Replace the placeholders with your actual links and titles -->
+
+    <div class="sub-navigation-container mt-5 pt-5">
+        <div class="sub-navigation">
             <a href="./Rundvee.php" class="sub-nav-item">Rundvee</a>
             <a href="./Paarden.php" class="sub-nav-item">Paarden</a>
             <a href="./Kleine_hoefdieren.php" class="sub-nav-item">Kleine hoefdieren</a>
@@ -57,25 +53,3 @@
             <a href="./Houtpellets.php" class="sub-nav-item">Houtpellets</a>
         </div>
     </div>
-</div>
-
-
-<script>// Add JavaScript to make the sub-navigation scrollable
-    const subNav = document.querySelector('.sub-nav');
-    let scrollValue = 0;
-
-    // Scroll right
-    document.querySelector('.scroll-right').addEventListener('click', () => {
-        scrollValue += 200; // Adjust the scrolling amount as needed
-        subNav.style.transform = `translateX(-${scrollValue}px)`;
-    });
-
-    // Scroll left
-    document.querySelector('.scroll-left').addEventListener('click', () => {
-        scrollValue -= 200; // Adjust the scrolling amount as needed
-        if (scrollValue < 0) {
-            scrollValue = 0;
-        }
-        subNav.style.transform = `translateX(-${scrollValue}px)`;
-    });
-</script>

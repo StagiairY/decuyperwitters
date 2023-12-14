@@ -112,8 +112,6 @@ include('include/header.php')
         }
 
 
-
-
         /* CSS for the section container */
         .section-container {
             display: flex;
@@ -140,7 +138,7 @@ include('include/header.php')
             background-position: center;
             transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
             filter: blur(5px); /* Initial blur value, adjust as needed */
-            color:white;
+            color: white;
         }
 
         /* CSS for the section links */
@@ -148,7 +146,6 @@ include('include/header.php')
             transform: scale(1); /* Zoom out to original size */
             filter: blur(0); /* Remove blur on hover */
         }
-
 
 
         /* CSS for the "Dieren" section background */
@@ -186,23 +183,31 @@ include('include/header.php')
             color: #0a391b;
         }
 
+        /* Add this CSS to your stylesheet or in a <style> tag in the head of your HTML */
+
+        .card-img-top {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .card-img-top:hover {
+            opacity: 0.8;
+            transform: scale(1.01);
+        }
 
 
     </style>
 
 
-
-
-<!--    <div id="diensten" class="section-container">-->
-<!--        <a href="#dieren" class="section-link">-->
-<!--            <div class="section-bg section-dieren"></div>-->
-<!--            <h3 class="section-title section-title-custom ">Dieren</h3>-->
-<!--        </a>-->
-<!--        <a href="#huis-en-tuin" class="section-link">-->
-<!--            <div class="section-bg section-huis-en-tuin"></div>-->
-<!--            <h3 class="section-title section-title-custom ">Huis en Tuin</h3>-->
-<!--        </a>-->
-<!--    </div>-->
+    <!--    <div id="diensten" class="section-container">-->
+    <!--        <a href="#dieren" class="section-link">-->
+    <!--            <div class="section-bg section-dieren"></div>-->
+    <!--            <h3 class="section-title section-title-custom ">Dieren</h3>-->
+    <!--        </a>-->
+    <!--        <a href="#huis-en-tuin" class="section-link">-->
+    <!--            <div class="section-bg section-huis-en-tuin"></div>-->
+    <!--            <h3 class="section-title section-title-custom ">Huis en Tuin</h3>-->
+    <!--        </a>-->
+    <!--    </div>-->
 
 
     <!--Dieren Summary-->
@@ -213,12 +218,13 @@ include('include/header.php')
                     <h3 class="section-subtitle">- dieren -</h3>
                 </div>
             </div>
-            <div class="row no-gutters">
+            <div class="row ">
                 <div class="col-lg-3 col-md-6">
                     <a href="./Rundvee.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/cows-producing-milk-gruyere-cheese-france-spring.jpg" class="card-img-top p-3" alt="Rundvee Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/cows-producing-milk-gruyere-cheese-france-spring.jpg"
+                                 class="card-img-top p-3" alt="Rundvee Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Rundvee</h5>
                             </div>
                         </div>
@@ -227,8 +233,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Paarden.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/horse-alezan-brown-ride-mane.jpg" class="card-img-top p-3" alt="Paarden Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/horse-alezan-brown-ride-mane.jpg" class="card-img-top p-3"
+                                 alt="Paarden Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Paarden</h5>
                             </div>
                         </div>
@@ -237,8 +244,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Kleine_hoefdieren.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/sheep.jpg" class="card-img-top p-3" alt="Kleine hoefdieren Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/sheep.jpg" class="card-img-top p-3" alt="Kleine hoefdieren Image"
+                                 style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Kleine hoefdieren</h5>
                             </div>
                         </div>
@@ -247,8 +255,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Stalstrooisel.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/hay-bedding.jpg" class="card-img-top p-3" alt="Stalstrooisel Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/hay-bedding.jpg" class="card-img-top p-3"
+                                 alt="Stalstrooisel Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Stalstrooisel</h5>
                             </div>
                         </div>
@@ -257,8 +266,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Neerhofdieren.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/chicken-walking-middle-field.jpg" class="card-img-top p-3" alt="Neerhofdieren Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/chicken-walking-middle-field.jpg" class="card-img-top p-3"
+                                 alt="Neerhofdieren Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Neerhofdieren</h5>
                             </div>
                         </div>
@@ -267,8 +277,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Honden_en_katten.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/cat-dog-lie-together-floor.jpg" class="card-img-top p-3" alt="Honden en katten Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/cat-dog-lie-together-floor.jpg" class="card-img-top p-3"
+                                 alt="Honden en katten Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Honden en katten</h5>
                             </div>
                         </div>
@@ -277,8 +288,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Duiven.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/two-piggeons-sitting-stone-fence-park.jpg" class="card-img-top p-3" alt="Duiven Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/two-piggeons-sitting-stone-fence-park.jpg"
+                                 class="card-img-top p-3" alt="Duiven Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Duiven</h5>
                             </div>
                         </div>
@@ -287,8 +299,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Vogels.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/olivebacked-sunbirds-feeding-child.jpg" class="card-img-top p-3" alt="Vogels Image" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/olivebacked-sunbirds-feeding-child.jpg" class="card-img-top p-3"
+                                 alt="Vogels Image" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Vogels</h5>
                             </div>
                         </div>
@@ -299,12 +312,6 @@ include('include/header.php')
     </div>
 
 
-
-
-
-
-
-
     <!--huis en tuin-->
     <div id="huis-en-tuin" class="bg2 site-section services-1-wrap">
         <div class="container">
@@ -313,12 +320,13 @@ include('include/header.php')
                     <h3 class="section-subtitle"> - huis en tuin -</h3>
                 </div>
             </div>
-            <div class="row no-gutters">
-                <div class="col-lg-3 col-md-6">
+            <div class="row g-5 ">
+                <div class="col-lg-3 col-md-6 ">
                     <a href="./Meststoffen.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/applying-fertilizer-big-green-beautiful-bush-flowers-before-bloom.jpg" class="card-img-top p-3" alt="Afbeelding-meststof" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/applying-fertilizer-big-green-beautiful-bush-flowers-before-bloom.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-meststof" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Meststoffen</h5>
                             </div>
                         </div>
@@ -327,8 +335,10 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Potgrond.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/hand-holding-peat-moss-organic-matter-improve-soil-agriculture-organic-plant-growing-ecology-concept.jpg" class="card-img-top p-3" alt="Afbeelding-schep-potgrond" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/hand-holding-peat-moss-organic-matter-improve-soil-agriculture-organic-plant-growing-ecology-concept.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-schep-potgrond"
+                                 style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Potgrond</h5>
                             </div>
                         </div>
@@ -337,8 +347,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Boomschors.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/beautiful-macro-wood-concept.jpg" class="card-img-top p-3" alt="Afbeelding-boom-schors" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/beautiful-macro-wood-concept.jpg" class="card-img-top p-3"
+                                 alt="Afbeelding-boom-schors" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Boomschors</h5>
                             </div>
                         </div>
@@ -347,8 +358,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Graszaden.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/wheat-grain-female-hand-green-grass-background.jpg" class="card-img-top p-3" alt="Afbeelding-grass" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/wheat-grain-female-hand-green-grass-background.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-grass" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Graszaden</h5>
                             </div>
                         </div>
@@ -357,8 +369,10 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Sproeistoffen.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron.jpg" class="card-img-top p-3" alt="Afbeelding-spray-fertilizer" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-spray-fertilizer"
+                                 style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Sproeistoffen</h5>
                             </div>
                         </div>
@@ -367,8 +381,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Tuingereedschap.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/row-gardening-tools-soil-background.jpg" class="card-img-top p-3" alt="Afbeelding-garden-tools" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/row-gardening-tools-soil-background.jpg" class="card-img-top p-3"
+                                 alt="Afbeelding-garden-tools" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Tuingereedschap</h5>
                             </div>
                         </div>
@@ -377,8 +392,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Zaden_en_planten.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/close-up-picture-hand-holding-planting-seed-plant.jpg" class="card-img-top p-3" alt="Afbeelding-seeds" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/close-up-picture-hand-holding-planting-seed-plant.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-seeds" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Zaden en planten</h5>
                             </div>
                         </div>
@@ -387,8 +403,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Laarzen_en_Jolly's.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/close-up-gardening-accesories.jpg" class="card-img-top p-3" alt="Afbeelding-laarzen" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/close-up-gardening-accesories.jpg" class="card-img-top p-3"
+                                 alt="Afbeelding-laarzen" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Laarzen en Jolly's</h5>
                             </div>
                         </div>
@@ -397,8 +414,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Weide_afsluiting.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/wooden-fence.jpg" class="card-img-top p-3" alt="fence" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/wooden-fence.jpg" class="card-img-top p-3" alt="fence"
+                                 style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Weide afsluiting</h5>
                             </div>
                         </div>
@@ -407,8 +425,10 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Antargaz.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/man-holding-bottle-butane-gas-red-background.jpg" class="card-img-top p-3" alt="Afbeelding-propane-fles" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/man-holding-bottle-butane-gas-red-background.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-propane-fles"
+                                 style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Antargaz</h5>
                             </div>
                         </div>
@@ -417,8 +437,9 @@ include('include/header.php')
                 <div class="col-lg-3 col-md-6">
                     <a href="./Houtpellets.php" class="service-link">
                         <div class="card">
-                            <img src="images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg" class="card-img-top p-3" alt="Afbeelding-hout" style="background-color: beige;">
-                            <div class="card-body">
+                            <img src="images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg"
+                                 class="card-img-top p-3" alt="Afbeelding-hout" style="background-color: white;">
+                            <div class="card-body text-center p-1 m-1">
                                 <h5 class="card-title">Houtpellets</h5>
                             </div>
                         </div>
@@ -427,9 +448,6 @@ include('include/header.php')
             </div>
         </div>
     </div>
-
-
-
 
 
     <div class="site-section pb-0">
