@@ -305,7 +305,7 @@ a:hover {
 }
 
 .ul-check.primary li:before {
-    color: #116530;
+    color: #49c176;
 }
 
 .select-wrap, .wrap-icon {
@@ -463,7 +463,7 @@ a:hover {
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown .active > a {
-    color: #116530 !important;
+    color: #49c176 !important;
 }
 
 .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
@@ -614,7 +614,7 @@ a:hover {
 }
 
 .site-mobile-menu .site-nav-wrap a:hover {
-    color: #116530;
+    color: #49c176;
 }
 
 .site-mobile-menu .site-nav-wrap li {
@@ -623,7 +623,7 @@ a:hover {
 }
 
 .site-mobile-menu .site-nav-wrap li.active > a {
-    color: #116530 !important;
+    color: #49c176 !important;
 }
 
 .site-mobile-menu .site-nav-wrap .arrow-collapse {
@@ -740,7 +740,7 @@ a:hover {
     -webkit-transition: .3s all ease;
     -o-transition: .3s all ease;
     transition: .3s all ease;
-    background: #116530;
+    background: #49c176;
 }
 
 .sticky-wrapper .site-navbar .site-logo a {
@@ -805,7 +805,7 @@ a:hover {
 }
 
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li > a.active:after {
-    background: #116530;
+    background: #49c176;
 }
 
 .sticky-wrapper.is-sticky .site-navbar .site-menu > li.active > a {
@@ -886,11 +886,11 @@ a:hover {
 }
 
 .custom-breadcrumns a:hover {
-    color: #116530;
+    color: #49c176;
 }
 
 .custom-breadcrumns .current {
-    color: #116530;
+    color: #49c176;
 }
 
 .section-title-underline {
@@ -899,7 +899,7 @@ a:hover {
 
 .section-title-underline span {
     display: inline-block;
-    border-bottom: 4px solid #116530;
+    border-bottom: 4px solid #49c176;
 }
 
 .section-title-underline.style-2 {
@@ -907,7 +907,7 @@ a:hover {
 }
 
 .section-title-underline.style-2 span {
-    border-color: #116530;
+    border-color: #49c176;
 }
 
 .section-bg {
@@ -939,12 +939,12 @@ a:hover {
 
 .section-bg.style-1 .icon {
     font-size: 3.5rem;
-    color: #116530;
+    color: #49c176;
 }
 
 .section-bg.style-1 h3 {
     font-size: 20px;
-    color: #116530;
+    color: #49c176;
     margin-bottom: 30px;
 }
 
@@ -1034,7 +1034,7 @@ a:hover {
 }
 
 .news-updates .post-entry-big .post-content .post-heading a:hover {
-    color: #116530;
+    color: #49c176;
 }
 
 .news-updates .post-entry-big.horizontal .img-link {
@@ -1047,7 +1047,7 @@ a:hover {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: #116530;
+    background: #49c176;
     position: relative;
 }
 
@@ -1132,7 +1132,7 @@ a:hover {
 
 .hero-slide .owl-nav .owl-prev:hover,
 .hero-slide .owl-nav .owl-next:hover {
-    background: #116530;
+    background: #49c176;
 }
 
 .hero-slide .owl-nav .owl-prev:hover > span,
@@ -1172,7 +1172,7 @@ a:hover {
 }
 
 .hero-slide .owl-dots .owl-dot.active > span {
-    background: #116530;
+    background: #49c176;
 }
 
 .hero-slide:hover .owl-nav {
@@ -1227,7 +1227,7 @@ a:hover {
 .owl-slide-3 .owl-nav .owl-prev:hover,
 .owl-slide-3 .owl-nav .owl-next:hover, .owl-slide .owl-nav .owl-prev:hover,
 .owl-slide .owl-nav .owl-next:hover {
-    background: #116530;
+    background: #49c176;
 }
 
 .owl-slide-3 .owl-nav .owl-prev:hover > span,
@@ -1273,7 +1273,7 @@ a:hover {
 }
 
 .owl-slide-3 .owl-dots .owl-dot.active > span, .owl-slide .owl-dots .owl-dot.active > span {
-    background: #116530;
+    background: #49c176;
 }
 
 .owl-slide .owl-nav {
@@ -1345,7 +1345,7 @@ a:hover {
 }
 
 .course-1-item .category {
-    background: #116530;
+    background: #49c176;
     padding: 20px;
 }
 
@@ -1620,7 +1620,7 @@ a:hover {
     left: -20px;
     border-top: 40px solid transparent;
     border-bottom: 40px solid transparent;
-    border-right: 40px solid #116530;
+    border-right: 40px solid #49c176;
     display: none;
 }
 
@@ -1645,7 +1645,7 @@ a:hover {
 
 
 .block-2 {
-    background: #116530;
+    background: #49c176;
     color: #fff;
     padding: 7rem 0;
 }
@@ -1671,7 +1671,7 @@ a:hover {
 
 .section-subtitle {
     font-weight: 300;
-    color: #116530;
+    color: #49c176;
     text-transform: uppercase;
     font-size: 1.3rem;
 }
@@ -1732,7 +1732,7 @@ a:hover {
 }
 
 .project-item .project-item-contents .project-item-category {
-    color: #116530;
+    color: #49c176;
     font-family: 'Open Sans', sans-serif;
     text-transform: uppercase;
 }
@@ -1777,7 +1777,7 @@ a:hover {
     font-family: 'Open Sans', sans-serif;
 
     .quote-form-wrap {
-        background: #116530 !important;
+        background: #49c176 !important;
         padding: 5rem;
     }
 
@@ -1840,7 +1840,7 @@ a:hover {
     }
 
     .person .person-contents .position {
-        color: #116530;
+        color: #49c176;
     }
 
     .person:hover img {
@@ -1875,7 +1875,7 @@ a:hover {
     }
 
     .person .social a:hover {
-        background: #116530;
+        background: #49c176;
         color: #fff;
     }
 
@@ -1897,7 +1897,7 @@ a:hover {
         font-family: 'Open Sans', sans-serif;
         text-transform: uppercase;
         font-size: 1.2rem;
-        color: #116530;
+        color: #49c176;
     }
 
     .blog-entry .img-link {
@@ -1938,7 +1938,7 @@ a:hover {
     }
 
     .blog-entry .blog-entry-contents .meta a {
-        color: #116530;
+        color: #49c176;
     }
 
     .block-4 h3 {

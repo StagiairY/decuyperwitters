@@ -46,7 +46,7 @@ include('include/header.php')
                         <div class="row mb-4">
                             <div class="col-md-12">
                                 <label for="message">Bericht</label>
-                                <textarea id="message" class="form-control" rows="8"></textarea>
+                                <textarea id="message" class="form-control"  style="height: 221px"></textarea>
                             </div>
                         </div>
                         <div class="row">

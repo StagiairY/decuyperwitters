@@ -3,6 +3,24 @@ include('include/header.php')
 ?>
 <h1>Honden en katten</h1>
 
+<style>
+    .inline-galery {
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .inline-galery a {
+        margin-right: 10px;
+    }
+
+    .inline-galery img {
+        border: 2px solid #ddd;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 200px;
+    }
+</style>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-8 offset-md-2">
@@ -13,16 +31,37 @@ include('include/header.php')
                         <p class="card-text">Zeer smakelijke kattenbrokjes in verpakkingen van 5kg en 15kg.</p>
                         <p class="card-text">Ook verschillende toebehoren verkrijgbaar zoals speeltjes, kattenbakvulling, enz.</p>
                         <p class="card-text">Eigen fabricatie van dieren hokken: Hondenslaaphokken, kippenhokken, konijnenhokken, ook op maat gemaakt.</p>
-                        <div class="inline-galery">
-                            <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_1.JPG">
-                                <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_1.JPG" alt="eigengemaakte_kippenhokken_1.JPG" width="120" height="120" data-pagespeed-url-hash="3041425475" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                            </a>
-                            <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_2.JPG">
-                                <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_2.JPG" alt="eigengemaakte_kippenhokken_2.JPG" width="120" height="120" data-pagespeed-url-hash="3335925396" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                            </a>
-                            <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_3.JPG">
-                                <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_3.JPG" alt="eigengemaakte_kippenhokken_3.JPG" width="120" height="120" data-pagespeed-url-hash="3630425317" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                            </a>
+                        <div class="container mt-3">
+                            <div id="smallImageCarousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_1.JPG">
+                                            <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_1.JPG"
+                                                 alt="eigengemaakte_kippenhokken_1.JPG" width="220" height="220">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_2.JPG">
+                                            <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_2.JPG"
+                                                 alt="eigengemaakte_kippenhokken_2.JPG" width="220" height="220">
+                                        </a>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_3.JPG">
+                                            <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_3.JPG"
+                                                 alt="eigengemaakte_kippenhokken_3.JPG" width="220" height="220">
+                                        </a>
+                                    </div>
+                                </div>
+                                <a class="carousel-control-prev" href="#smallImageCarousel" role="button" data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#smallImageCarousel" role="button" data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
                         </div>
                         <div class="inline-galery">&nbsp;</div>
                         <h2><strong>Meer info nodig?</strong></h2>
