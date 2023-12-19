@@ -8,12 +8,7 @@ include('include/header.php')
 
     <!-- HEADER / NAV CONTENT-->
 
-    <script type="text/javascript">strURL="http://www.decuyperwitters.be";</script>
-
-
-
-
-
+    <script type="text/javascript">strURL = "http://www.decuyperwitters.be";</script>
 
 
     <div class="product-afbeelding">&nbsp;</div>

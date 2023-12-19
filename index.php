@@ -10,7 +10,7 @@ include('include/header.php')
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
-                        <h1>Landbouw is de beste oplossing voor wereldwijde <span style="font-weight: bold; color: #065724">honger.</span></h1>
+                        <h1>Landbouw is de beste oplossing voor wereldwijde <span style="font-weight: bold; color: #098738">honger.</span></h1>
                     </div>
                 </div>
             </div>
@@ -22,7 +22,7 @@ include('include/header.php')
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
                         <span class="d-block"></span>
-                        <h1>Biologische groenten zijn goed voor de<span style="font-weight: bold; color: #065724">gezondheid .</span></h1>
+                        <h1>Biologische groenten zijn goed voor de <span style="font-weight: bold; color: #098738 >gezondheid .</span></h1>
                     </div>
                 </div>
             </div>
@@ -34,7 +34,7 @@ include('include/header.php')
                 <div class="row align-items-center">
                     <div class="col-lg-7 justify-content-center mx-auto text-center" data-aos="fade-up">
                         <span class="d-block"></span>
-                        <h1>Dagelijks <span style="font-weight: bold; color: #065724">verse</span> producten aanbieden</h1>
+                        <h1>Dagelijks <span style="font-weight: bold; color: #098738">verse</span> producten aanbieden</h1>
                     </div>
                 </div>
             </div>

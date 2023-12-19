@@ -35,20 +35,20 @@ include('include/header.php')
                             <div id="smallImageCarousel" class="carousel slide" data-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_1.JPG">
-                                            <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_1.JPG"
+                                        <a class="popup">
+                                            <img class="foto" src="images/old/2_Honden_en_katten_eten_1.jpg"
                                                  alt="eigengemaakte_kippenhokken_1.JPG" width="220" height="220">
                                         </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_2.JPG">
-                                            <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_2.JPG"
+                                        <a class="popup" >
+                                            <img class="foto" src="images/old/2_Honden_en_katten_eten_2.jpg"
                                                  alt="eigengemaakte_kippenhokken_2.JPG" width="220" height="220">
                                         </a>
                                     </div>
                                     <div class="carousel-item">
-                                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_3.JPG">
-                                            <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Honden_en_katten_eten_3.JPG"
+                                        <a class="popup" >
+                                            <img class="foto" src="images/old/2_Honden_en_katten_eten_3.jpg"
                                                  alt="eigengemaakte_kippenhokken_3.JPG" width="220" height="220">
                                         </a>
                                     </div>

@@ -1,6 +1,8 @@
 <?php
 include('include/header.php')
 ?>
+
+
 <h1>Potgrond</h1>
 
 <div id="main">
@@ -14,7 +16,7 @@ include('include/header.php')
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-6">
-                  <h1>  <strong>Potgrond</strong></h1>
+                <h1><strong>Potgrond</strong></h1>
                 <p>Wij beschikken steeds over een ruim aanbod potgronden, zaai- en stekgrond, bodemverbeteraars en
                     turf.</p>
                 <ul>
@@ -30,12 +32,12 @@ include('include/header.php')
             </div>
             <div class="col-md-6">
                 <div class="home-frame">
-                    <img src="http://www.decuyperwitters.be/UPLOAD/2_terrabrill.jpg" alt="logo" width="200">
+                    <img src="images/old/2_terrabrill.jpg" alt="logo" width="200">
                     <br><br><br>
-                    <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Potgrond.jpg">
-                        <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Potgrond.jpg" alt="Potgrond.jpg"
-                             width="200">
-                    </a>
+
+                    <img class="foto" src="images/old/2_Potgrond.jpg" alt="Potgrond.jpg"
+                         width="200">
+
                 </div>
             </div>
         </div>

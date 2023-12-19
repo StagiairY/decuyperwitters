@@ -3,13 +3,13 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-6">
-                <h6>About</h6>
+                <h6>Over ons</h6>
                 <p class="text-justify">De Cuyper Witters uit Heist-op-den-Berg is uw specialist voor alles op het gebied van dier en tuin.
                     Wij bieden een breed scala aan producten en professioneel advies</p>
             </div>
 
             <div class="col-xs-6 col-md-3">
-                <h6>Categories</h6>
+                <h6>categorieën</h6>
                 <ul class="list-unstyled">
                     <li><a href="./Rundvee.php">Rundvee</a></li>
                     <li><a href="./Paarden.php">Paarden</a></li>
@@ -23,7 +23,7 @@
             </div>
 
             <div class="col-xs-6 col-md-3">
-                <h6>Quick Links</h6>
+                <h6>snelle Links</h6>
                 <ul class="list-unstyled">
                     <li><a href="#">Over Ons</a></li>
                     <li><a href="#">Nieuws</a></li>
@@ -84,8 +84,6 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="path/to/bootstrap.bundle.min.js"></script>
 <script src="path/to/popper.min.js"></script>
-
-
 <script src="js/main.js"></script>
 
 

@@ -92,13 +92,11 @@ include('include/header.php')
         </div>
         <div class="col-md-6">
             <div class="home-frame">
-                <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Kleine_hoefdieren.JPG">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Kleine_hoefdieren.JPG" alt="Kleine Hoefdieren" width="200">
-                </a>
+                <img class="foto" src="images/old/2_Kleine_hoefdieren.jpg" alt="Kleine Hoefdieren" width="200">
                 <br><br>
-                <img src="http://www.decuyperwitters.be/UPLOAD/2_roosens.JPG" alt="roosens.JPG" width="128" height="143">
+                <img src="images/old/2_roosens.jpg" alt="roosens.JPG" width="128" height="143">
                 <br><br><br>
-                <img src="http://www.decuyperwitters.be/UPLOAD/2_mijten.JPG" alt="mijten.JPG" width="175" height="57">
+                <img src="images/old/2_mijten.jpg" alt="mijten.JPG" width="175" height="57">
             </div>
         </div>
     </div>

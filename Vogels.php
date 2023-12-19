@@ -1,17 +1,20 @@
 <?php
 include('include/header.php')
 ?>
+
+
+<style>
+    #imageCarousel .carousel-inner img {
+        height: 300px; /* Set your desired fixed height */
+        object-fit: cover; /* Preserve aspect ratio and cover the whole area */
+        width: 300px;
+    }
+</style>
 <h1>Vogels</h1>
 
 <div id="main">
 
 
-    <style>
-        #imageCarousel .carousel-inner img {
-            height: 300px; /* Set your desired fixed height */
-            object-fit: cover; /* Preserve aspect ratio and cover the whole area */
-        }
-    </style>
 
 
     <!-- HEADER / NAV CONTENT-->
@@ -42,40 +45,25 @@ include('include/header.php')
             </div>
         </div>
 
-        <div class="container mt-3">
-            <div id="imageCarousel" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="http://www.decuyperwitters.be/UPLOAD/2_beduco.png" alt="logo" class="d-block w-20">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="http://www.decuyperwitters.be/UPLOAD/2_gen_d__vyr_4140-20KG.jpg" alt="gen_d__vyr_4140-20KG.jpg"
-                             class="d-block w-20">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="http://www.decuyperwitters.be/UPLOAD/2_delinature.jpg" alt="delinature.jpg" class="d-block w-20">
-                    </div>
-                    <div class="carousel-item">
-                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Vogels_1.JPG">
-                            <img src="http://www.decuyperwitters.be/UPLOAD/3_Vogels_1.JPG" alt="Vogels_1.JPG" class="d-block w-20">
-                        </a>
-                    </div>
-                    <div class="carousel-item">
-                        <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Vogels_2.JPG">
-                            <img src="http://www.decuyperwitters.be/UPLOAD/3_Vogels_2.JPG" alt="Vogels_2.JPG" class="d-block w-20">
-                        </a>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+        <div class="container mt-3 d-flex flex-wrap justify-content-around">
+            <div class="image-item">
+                <img src="images/old/2_beduco.png" alt="logo" class="img-fluid">
+            </div>
+            <div class="image-item">
+                <img src="images/old/2_gen_d__vyr_4140-20KG.jpg" alt="gen_d__vyr_4140-20KG.jpg" class="img-fluid">
+            </div>
+            <div class="image-item">
+                <img src="images/old/2_delinature.jpg" alt="delinature.jpg" class="img-fluid">
+            </div>
+            <div class="image-item">
+                <img src="images/old/3_Vogels_1.jpg" alt="Vogels_1.jpg" class="img-fluid">
+            </div>
+            <div class="image-item">
+                <img src="images/old/3_Vogels_2.jpg" alt="Vogels_2.jpg" class="img-fluid">
             </div>
         </div>
+
+
     </div>
 </div>
 

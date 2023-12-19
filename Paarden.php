@@ -1,7 +1,4 @@
 <?php include('include/header.php'); ?>
-
-<?php include('include/sub_navigation.php'); ?>
-
 <style>
 
 
@@ -45,7 +42,7 @@
 
 <div class="container mt-5 pt-5">
     <h1>Paarden</h1>
-    <div class="grid-item">
+    <div >
         <h3>Krachtvoeders MIJTEN</h3>
         <ul>
             <li>
@@ -67,7 +64,7 @@
         </ul>
     </div>
 
-    <div class="grid-item">
+    <div >
         <h3>Krachtvoeders ROOSENS</h3>
         <ul>
             <li>
@@ -91,9 +88,9 @@
 
     <p>Verschillende andere mengelingen van Roosens ook verkrijgbaar op bestelling!</p>
 
-    <div class="grid-item">
+    <div >
         <h2>Enkelvoudige paardenvoeders</h2>
-        <div class="grid-item">
+        <div c>
             <ul>
                 <li>Gerstevlokken</li>
                 <li>Maisvlokken</li>
@@ -103,9 +100,9 @@
         </div>
     </div>
 
-    <div class="grid-item">
+    <div >
         <h2>Bijproducten paardenvoeders</h2>
-        <div class="grid-item">
+        <div >
             <ul>
                 <li>Lijnzaadkorrels</li>
                 <li>Lijnzaadolie</li>
@@ -121,6 +118,31 @@
                 <li>Paardensnoepjes Mijten</li>
             </ul>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+
+            <img class="img-fluid"
+                 src="images/old/2_Paarden_1.jpg"
+                 alt="paarden voedsel img">
+
+        </div>
+        <div class="col">
+
+            <img class="img-fluid"
+                 src="images/old/2_Paarden_2.jpg"
+                 alt="paarden voedsel img">
+
+        </div>
+        <div class="col">
+
+            <img class="img-fluid"
+                 src="images/old/2_Paarden_3.jpg"
+                 alt="paarden voedsel img">
+
+        </div>
+        <!-- Add more gallery images within columns as needed -->
     </div>
 
 </div>

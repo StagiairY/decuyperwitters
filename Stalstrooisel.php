@@ -9,9 +9,6 @@ include('include/header.php')
     <!-- HEADER / NAV CONTENT-->
 
 
-
-
-
     <div class="product-info">
         <h1>STALSTROOISELS </h1>
         <h2>HOUTVEZEL</h2>
@@ -46,15 +43,20 @@ include('include/header.php')
         <ul style="list-style-type: disc;">
             <li>100% natuurlijk product afkomstig van de hennestengel</li>
             <li>Zeer geschikt voor paarden met ademhalingsproblemen</li>
-            <li>1 baal per 2m² en lichtjes besprenkelen met water met een kleine hoeveelheid azijn of javel toegevoegd</li>
+            <li>1 baal per 2m² en lichtjes besprenkelen met water met een kleine hoeveelheid azijn of javel toegevoegd
+            </li>
             <li>Verpakt in een plastic verpakking.</li>
             <li>Bij ons verkrijgbaar per pak.<br><br></li>
         </ul>
         <h2><strong>Meer info nodig?</strong></h2>
-        <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a href="contact.php">contactpagina</a></p>
+        <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a
+                    href="contact.php">contactpagina</a></p>
     </div>
     <div class="product-afbeelding">
-        <div class="home-frame"><a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Houtvezel_-_Vlas_-_Aubiose_(2).JPG"><img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Houtvezel_-_Vlas_-_Aubiose_(2).JPG" alt="logo" width="200" data-pagespeed-url-hash="1398981694" onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></a></div>
+        <div class="home-frame"><img
+                        class="foto" src="images/old/2_Houtvezel_-_Vlas_-_Aubiose_(2).jpg" alt="logo" width="200"
+                        data-pagespeed-url-hash="1398981694"
+                        onload="pagespeed.CriticalImages.checkImageForCriticality(this);"></div>
     </div>
     <div class="clear">&nbsp;</div>
 

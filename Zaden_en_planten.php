@@ -20,21 +20,24 @@ include('include/header.php')
                 <li>...</li>
             </ul>
             <h2>Meer info nodig?</h2>
-            <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a href="contact.php">contactpagina</a></p>
+            <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a
+                        href="contact.php">contactpagina</a></p>
         </div>
         <div class="col-md-6">
             <div class="home-frame">
-                <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Zaden_en_planten_1.JPG">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Zaden_en_planten_1.JPG" alt="Zaden en planten 1" width="200">
-                </a>
+
+                <img class="foto" src="images/old/2_Zaden_en_planten_1.JPG"
+                     alt="Zaden en planten 1" width="200">
+
                 <br><br>
-                <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Zaden_en_Planten_2.jpg">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Zaden_en_Planten_2.jpg" alt="Zaden en planten 2" width="200">
-                </a>
+
+                <img class="foto" src="images/old/2_Zaden_en_Planten_2.jpg"
+                     alt="Zaden en planten 2" width="200">
+
                 <br><br>
-                <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_planten.jpg">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_planten.jpg" alt="Planten" width="200">
-                </a>
+
+                <img class="foto" src="images/old/2_planten.jpg" alt="Planten" width="200">
+
             </div>
         </div>
     </div>

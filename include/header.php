@@ -121,35 +121,35 @@
 
 <?php
 $current_page = basename($_SERVER['PHP_SELF']);
+$activeClass = function ($page, $condition = true) use ($current_page) {
+    return ($current_page == $page && $condition) ? 'active' : '';
+};
 ?>
 
 <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
     <div class="container">
         <div class="d-flex align-items-center">
-
             <div class="site-logo">
                 <a href="index.php" class="logo">
                     <img src="../images/part1/decuyperwitters.png" width="60" alt="Logo" class="img-fluid">
                 </a>
             </div>
-
             <div class="mx-auto">
                 <nav class="site-navigation position-relative text-right" role="navigation">
                     <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
-                        <li class="<?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">
+                        <li class="<?= $activeClass('index.php', !isset($_GET['diensten'])); ?>">
                             <a href="index.php" class="nav-link text-left">Home</a>
                         </li>
-                        <li class="<?php echo ($current_page == 'about.php') ? 'active' : ''; ?>">
-                            <a href="about.php" class="nav-link text-left">Over ons</a>
-                        </li>
-                        <li class="<?php echo ($current_page == 'index.php#diensten') ? 'active' : ''; ?>">
+                        <li class="<?= $activeClass('index.php#diensten', isset($_GET['diensten'])); ?>">
                             <a href="index.php#diensten" class="nav-link text-left">diensten</a>
                         </li>
-                        <!--                        <li class="-->
-                        <?php //echo ($current_page == 'blog.html') ? 'active' : ''; ?><!--">-->
-                        <!--                            <a href="blog.html" class="nav-link text-left">Blog</a>-->
-                        <!--                        </li>-->
-                        <li class="<?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>">
+                        <li class="<?= $activeClass('about.php'); ?>">
+                            <a href="about.php" class="nav-link text-left">Over ons</a>
+                        </li>
+                        <!-- <li class="<?= $activeClass('blog.html'); ?>">
+                            <a href="blog.html" class="nav-link text-left">Blog</a>
+                        </li> -->
+                        <li class="<?= $activeClass('contact.php'); ?>">
                             <a href="contact.php" class="nav-link text-left">Contact</a>
                         </li>
                     </ul>
@@ -158,5 +158,6 @@ $current_page = basename($_SERVER['PHP_SELF']);
         </div>
     </div>
 </div>
+
 
 

@@ -2,11 +2,12 @@
 include('include/header.php')
 ?>
 
-<div class="container mt-5">
+<div class="container mt-5 pt-5">
     <div class="row">
         <div class="col-md-6">
-            <h1><a href="../huis-en-tuin">Tuin</a> <img src="../IMG/icon-arrow-title.png" alt=">"> <strong>Tuingereedschap</strong></h1>
+            <h1><strong>Tuingereedschap</strong></h1
             <p>Een ruim assortiment van tuingereedschap zoals:</p>
+
             <ul>
                 <li>Verschillende soorten schoppen, rieken, gaffels,...</li>
                 <li>Snoeigerief</li>
@@ -14,21 +15,25 @@ include('include/header.php')
                 <li>Kruiwagens</li>
             </ul>
             <div class="inline-gallery">
-                <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_Kruiwagens.JPG">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Kruiwagens.JPG" alt="Kruiwagens" width="120">
-                </a>
-                <a href="http://www.decuyperwitters.be/UPLOAD/2_Tuingereedschap_1.JPG">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Tuingereedschap_1.JPG" alt="Tuingereedschap 1" width="120" height="120">
-                </a>
-                <a href="http://www.decuyperwitters.be/UPLOAD/2_Tuingereedschap_2.jpg">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Tuingereedschap_2.jpg" alt="Tuingereedschap 2" width="120" height="120">
-                </a>
-                <a href="http://www.decuyperwitters.be/UPLOAD/2_Tuingereedschap_3.jpg">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_Tuingereedschap_3.jpg" alt="Tuingereedschap 3" width="120" height="120">
-                </a>
+
+                <img class="foto" src="images/old/3_Kruiwagens.jpg" alt="Kruiwagens" width="120">
+
+
+                <img class="foto" src="images/old/3_Tuingereedschap_1.jpg" alt="Tuingereedschap 1" width="120"
+                     height="120">
+
+
+                <img class="foto" src="images/old/3_Tuingereedschap_2.jpg" alt="Tuingereedschap 2" width="120"
+                     height="120">
+
+
+                <img class="foto" src="images/old/3_Tuingereedschap_3.jpg" alt="Tuingereedschap 3" width="120"
+                     height="120">
+
             </div>
             <h2>Meer info nodig?</h2>
-            <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a href="contact.php">contactpagina</a></p>
+            <p>Neem telefonisch contact met ons op, op het nummer 015/23.32.37 of stuur een bericht via de <a
+                        href="contact.php">contactpagina</a></p>
         </div>
     </div>
 </div>

@@ -18,9 +18,7 @@ include('include/header.php')
         </div>
         <div class="col-md-6">
             <div class="home-frame">
-                <a class="popup" href="http://www.decuyperwitters.be/UPLOAD/2_JollyenLaarzen1.jpg">
-                    <img class="foto" src="http://www.decuyperwitters.be/UPLOAD/2_JollyenLaarzen1.jpg" alt="Laarzen en jolly's" width="200">
-                </a>
+                    <img class="foto" src="images/old/2_JollyenLaarzen1.jpg" alt="Laarzen en jolly's" width="375">
             </div>
         </div>
     </div>
