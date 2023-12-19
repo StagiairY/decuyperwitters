@@ -3,8 +3,6 @@ include('include/header.php')
 ?>
 
 
-
-
     <div class=" pt-0 mt-0 intro-section site-blocks-cover innerpage"
          style="height: 600px; background-image: url('images/part1/cows-grazing-around-farm.jpg');">
         <div class="container">
@@ -22,6 +20,7 @@ include('include/header.php')
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
+                    <!--TODO: ADD CONTACT FORM LOGIC -->
                     <form>
                         <div class="row mb-4">
                             <div class="col-md-6">
@@ -46,12 +45,13 @@ include('include/header.php')
                         <div class="row mb-4">
                             <div class="col-md-12">
                                 <label for="message">Bericht</label>
-                                <textarea id="message" class="form-control"  style="height: 221px"></textarea>
+                                <textarea id="message" class="form-control" style="height: 221px"></textarea>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <button type="submit" class="btn btn-primary rounded-pill px-4">Verstuur Bericht</button>
+                                <button type="submit" class="btn btn-primary rounded-pill px-4">Verstuur Bericht
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -64,8 +64,11 @@ include('include/header.php')
                         <div class="card-body text-primary">
 
                             <p class="card-text"><strong>Adres:</strong> Koningsbaan 40 - 2220 Heist-op-den-Berg</p>
-                            <p class="card-text"><strong>Telefoon:</strong> <a href="tel:015233237" class="text-primary">015.23.32.37</a></p>
-                            <p class="card-text"><strong>E-mail:</strong> <a href="mailto:info@decuyper-gilbert.be" class="text-primary">decuyper-gilbert@hotmail.com</a></p>
+                            <p class="card-text"><strong>Telefoon:</strong> <a href="tel:015233237"
+                                                                               class="text-primary">015.23.32.37</a></p>
+                            <p class="card-text"><strong>E-mail:</strong> <a href="mailto:info@decuyper-gilbert.be"
+                                                                             class="text-primary">decuyper-gilbert@hotmail.com</a>
+                            </p>
                         </div>
                     </div>
 
@@ -85,7 +88,6 @@ include('include/header.php')
             </div>
         </div>
     </section>
-
 
 
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1532.4879674980743!2d4.679626367058454!3d51.05058551047885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c15850a02dfbcf%3A0x79589e1ffc5187ab!2sKoningsbaan%2040%2C%202220%20Heist-op-den-Berg!5e0!3m2!1snl!2sbe!4v1701353178568!5m2!1snl!2sbe"
