@@ -72,6 +72,7 @@ $conn = null;
                                     <th>Name</th>
                                     <th>Description</th>
                                     <th>Price</th>
+                                    <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -94,6 +95,9 @@ $conn = null;
                                         <td contenteditable="true"><?php echo $product['name']; ?></td>
                                         <td contenteditable="true"><?php echo $product['description']; ?></td>
                                         <td contenteditable="true"><?php echo $product['price']; ?></td>
+                                        <td>
+                                            <span class="delete-product" data-product-id="<?php echo $product['id']; ?>" style="cursor: pointer;">🗑</span>
+                                        </td>
                                     </tr>
                                 <?php endforeach;
 
@@ -235,6 +239,39 @@ $conn = null;
         });
     });
 </script>
+
+<script>
+    jQuery(document).ready(function ($) {
+        // ... (Existing code)
+
+        // Add this block for handling the trash icon click event
+        $('.delete-product').on('click', function () {
+            var productId = $(this).data('product-id');
+
+            // Ask for confirmation before deleting
+            if (confirm('Are you sure you want to delete this product?')) {
+                // Send AJAX request to delete the product
+                $.ajax({
+                    type: 'POST',
+                    url: 'includes/delete_product.php', // Create this file to handle the deletion logic
+                    data: {
+                        productId: productId
+                    },
+                    success: function (response) {
+                        console.log(response);
+                        // Remove the row from the table on success
+                        $('.product-table tr[data-product-id="' + productId + '"]').remove();
+                    },
+                    error: function (error) {
+                        console.error('Error deleting product: ' + error.statusText);
+                    }
+                });
+            }
+        });
+    });
+</script>
+
+
 
 </body>
 

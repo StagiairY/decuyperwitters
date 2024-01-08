@@ -55,18 +55,21 @@ include "includes/auth.php";
 <body>
 <div class="container">
     <div class="d-flex justify-content-between align-items-center">
+        <!-- Add your logo image here -->
+        <img src="/images/part1/decuyperwitters.png" alt="DCW Logo" height="50" width="50">
         <h1>Admin Dashboard</h1>
         <a href="includes/logout.php" class="logout-link">Logout</a>
     </div>
     <ul class="nav nav-pills">
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="manage_categories.php">Manage Categories</a>-->
-<!--        </li>-->
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="manage_categories.php">Manage Categories</a>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link" href="manage_products.php">Manage Products</a>
         </li>
     </ul>
 </div>
+
 
 <!-- Bootstrap JS and Popper.js (Required for Bootstrap features) -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
