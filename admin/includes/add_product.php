@@ -1,11 +1,10 @@
 <?php
-include "db.php";
-include "auth.php";
+include "db.php"; // Include your database connection file
 
 $responseMessage = ""; // Initialize an empty response message
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve form data
+    // Retrieve form data²
     $productName = $_POST["productName"];
     $productDescription = $_POST["productDescription"];
     $productPrice = $_POST["productPrice"];
@@ -30,15 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the database connection
 $conn = null;
+
+echo $responseMessage; // Return the response message to the AJAX request
 ?>
-
-
-<!-- Display the response message -->
-<?php echo $responseMessage; ?>
-
-
-<script>
-    setTimeout(function () {
-        window.location.href = '../manage_products.php'; // Replace 'your_target_page.php' with the actual target page
-    }, 2000); // 3000 milliseconds = 3 seconds
-</script>
