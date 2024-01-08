@@ -8,4 +8,5 @@ if (!isset($_SESSION['user_id'])) {
     header("Location: includes/login.php");
     exit();
 }
+
 ?>
