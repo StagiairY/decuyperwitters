@@ -19,8 +19,10 @@ $conn = null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Categories</title>
+    <title>Manage Products</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
     <link rel="stylesheet" href="styles.css">
     <style>
         .category-card * {
@@ -43,23 +45,26 @@ $conn = null;
 <?php include "admin_dashboard.php"; ?>
 
 <div class="container">
-    <h2 class="text-center mb-4">Manage Categories</h2>
+    <h2 class="text-center mb-4">Manage Products</h2>
 
     <div class="row">
         <?php foreach ($categories as $category) : ?>
             <div class="col-md-4">
-                <div class="card category-card" data-toggle="modal" data-target="#categoryModal<?php echo $category['id']; ?>">
+                <div class="card category-card" data-toggle="modal"
+                     data-target="#categoryModal<?php echo $category['id']; ?>">
                     <div class="card-body">
                         <h5 class="card-title category-title"><?php echo $category['name']; ?></h5>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="categoryModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="categoryModalLabel" aria-hidden="true">
+            <div class="modal fade" id="categoryModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog"
+                 aria-labelledby="categoryModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="categoryModalLabel"><?php echo $category['name']; ?> Products</h5>
+                            <h5 class="modal-title" id="categoryModalLabel"><?php echo $category['name']; ?>
+                                Products</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -68,9 +73,10 @@ $conn = null;
                             <table class="table product-table">
                                 <thead>
                                 <tr>
-                                    <th>ID</th>
+<!--                                    <th>ID</th>-->
                                     <th>Name</th>
                                     <th>Description</th>
+                                    <th>weight</th>
                                     <th>Price</th>
                                     <th>Action</th>
                                 </tr>
@@ -91,12 +97,14 @@ $conn = null;
 
                                 foreach ($products as $product) : ?>
                                     <tr data-product-id="<?php echo $product['id']; ?>">
-                                        <td><?php echo $product['id']; ?></td>
+<!--                                        <td>--><?php //echo $product['id']; ?><!--</td>-->
                                         <td contenteditable="true"><?php echo $product['name']; ?></td>
                                         <td contenteditable="true"><?php echo $product['description']; ?></td>
+                                        <td contenteditable="true"><?php echo $product['weight']; ?></td>
                                         <td contenteditable="true"><?php echo $product['price']; ?></td>
                                         <td>
-                                            <span class="delete-product" data-product-id="<?php echo $product['id']; ?>" style="cursor: pointer;">🗑</span>
+                                            <span class="delete-product" data-product-id="<?php echo $product['id']; ?>"
+                                                  style="cursor: pointer;">🗑</span>
                                         </td>
                                     </tr>
                                 <?php endforeach;
@@ -106,23 +114,35 @@ $conn = null;
                                 </tbody>
                             </table>
 
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProductModal<?php echo $category['id']; ?>">
-                                Add Product
-                            </button>
+
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary save-changes-btn">Save Changes</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target="#addProductModal<?php echo $category['id']; ?>">
+                                <i class="fas fa-plus"></i>
+                            </button>
+
+
+                            <button type="button" class="btn btn-primary save-changes-btn">
+                                <i class="fas fa-save"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                <i class="fas fa-times"></i>
+                            </button>
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal fade" id="addProductModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal fade addproductmodal" id="addProductModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog"
+                 aria-labelledby="addProductModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="addProductModalLabel">Add Product to <?php echo $category['name']; ?></h5>
+                            <h5 class="modal-title" id="addProductModalLabel">Add Product
+                                to <?php echo $category['name']; ?></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -130,19 +150,32 @@ $conn = null;
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="productName<?php echo $category['id']; ?>" >Product Name</label>
-                                    <input type="text" class="form-control" id="productName<?php echo $category['id']; ?>" name="productName" required>
+                                    <label for="productName<?php echo $category['id']; ?>">Product Name</label>
+                                    <input type="text" class="form-control"
+                                           id="productName<?php echo $category['id']; ?>" name="productName" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="productDescription<?php echo $category['id']; ?>">Product Description</label>
-                                    <textarea class="form-control" id="productDescription<?php echo $category['id']; ?>" name="productDescription"></textarea>
+                                    <label for="productDescription<?php echo $category['id']; ?>">Product
+                                        Description</label>
+                                    <textarea class="form-control" id="productDescription<?php echo $category['id']; ?>"
+                                              name="productDescription" style="height: 200px;"></textarea>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="productPrice<?php echo $category['id']; ?>">Product Price</label>
-                                    <input type="number" class="form-control" id="productPrice<?php echo $category['id']; ?>" name="productPrice" step="0.01" required>
+                                    <input type="number" class="form-control"
+                                           id="productPrice<?php echo $category['id']; ?>" name="productPrice"
+                                           step="0.01" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="productWeight<?php echo $category['id']; ?>">Product Weight</label>
+                                    <input type="number" class="form-control"
+                                           id="productWeight<?php echo $category['id']; ?>" name="productWeight"
+                                           step="0.01" required>
                                 </div>
 
-                                <input type="hidden" id="categoryId<?php echo $category['id']; ?>" value="<?php echo $category['id']; ?>">
+                                <input type="hidden" id="categoryId<?php echo $category['id']; ?>"
+                                       value="<?php echo $category['id']; ?>">
                                 <button type="button" class="btn btn-primary add-product-btn">Add Product</button>
                             </form>
                         </div>
@@ -159,6 +192,10 @@ $conn = null;
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
+
+
+
+
     jQuery(document).ready(function ($) {
         $('.product-table td[contenteditable=true]').on('focus', function () {
             $(this).data('before', $(this).html());
@@ -175,7 +212,8 @@ $conn = null;
                 var productId = $(this).data('product-id');
                 var name = $(this).find('td:eq(1)').text();
                 var description = $(this).find('td:eq(2)').text();
-                var price = $(this).find('td:eq(3)').text();
+                var price = $(this).find('td:eq(4)').text();
+                var weight = $(this).find('td:eq(3)').text();
 
                 $.ajax({
                     type: 'POST',
@@ -184,7 +222,8 @@ $conn = null;
                         productId: productId,
                         name: name,
                         description: description,
-                        price: price
+                        price: price,
+                        weight: weight
                     },
                     success: function (response) {
                         console.log(response);
@@ -203,18 +242,23 @@ $conn = null;
             var productName = $('#productName' + categoryId).val();
             var productDescription = $('#productDescription' + categoryId).val();
             var productPrice = $('#productPrice' + categoryId).val();
-
-            if (productName === '') {
-                alert('Product Name cannot be empty.');
-                return;
-            }
-
-            if (productPrice === '') {
-                alert('Product Price cannot be empty.');
-                return;
-            }
+            var productWeight = $('#productWeight' + categoryId).val();
 
 
+
+
+            // if (productName === '') {
+            //     alert('Product Name cannot be empty.');
+            //     return;
+            // }
+            //
+            // if (productPrice === '') {
+            //     alert('Product Price cannot be empty.');
+            //     return;
+            // }
+
+
+            // Update this part of your add-product-btn click handler
             $.ajax({
                 type: 'POST',
                 url: 'includes/add_product.php',
@@ -222,21 +266,37 @@ $conn = null;
                     productName: productName,
                     productDescription: productDescription,
                     productPrice: productPrice,
-                    categoryId: categoryId
+                    categoryId: categoryId,
+                    weight: productWeight
                 },
                 success: function (response) {
                     console.log(response);
-                    $('#addProductModal' + categoryId).modal('hide');
+
+                    // Update the product table dynamically
+                    var newRow = '<tr data-product-id="' + response.productId + '">' +
+                        '<td contenteditable="true">' + productName + '</td>' +
+                        '<td contenteditable="true">' + productDescription + '</td>' +
+                        '<td contenteditable="true">' + productWeight + '</td>' +
+                        '<td contenteditable="true">' + productPrice + '</td>' +
+                        '<td>' +
+                        '<span class="delete-product" data-product-id="' + response.productId + '" style="cursor: pointer;">🗑</span>' +
+                        '</td>' +
+                        '</tr>';
+
+                    $('.product-table tbody').append(newRow);
+
+
+
                 },
                 error: function (error) {
                     console.error('Error adding product: ' + error.statusText);
                 }
             });
+
+
+
         });
 
-        $('#addProductModal').on('hidden.bs.modal', function (e) {
-            // Additional actions after the modal is hidden
-        });
     });
 </script>
 
@@ -270,7 +330,6 @@ $conn = null;
         });
     });
 </script>
-
 
 
 </body>

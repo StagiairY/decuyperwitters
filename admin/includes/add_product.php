@@ -9,14 +9,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $productDescription = $_POST["productDescription"];
     $productPrice = $_POST["productPrice"];
     $categoryId = $_POST["categoryId"];
+    $weight = $_POST["weight"];
 
     // Insert the new product into the database
-    $insertProductQuery = "INSERT INTO products (name, description, price, category_id) VALUES (:name, :description, :price, :category_id)";
+    $insertProductQuery = "INSERT INTO products (name, description, price, category_id, weight) VALUES (:name, :description, :price, :category_id, :weight)";
     $insertProductStatement = $conn->prepare($insertProductQuery);
     $insertProductStatement->bindParam(':name', $productName);
     $insertProductStatement->bindParam(':description', $productDescription);
     $insertProductStatement->bindParam(':price', $productPrice);
     $insertProductStatement->bindParam(':category_id', $categoryId);
+    $insertProductStatement->bindParam(':weight', $weight);
 
     if ($insertProductStatement->execute()) {
         $responseMessage = '<div class="alert alert-success" role="alert">Product added successfully!</div>';
