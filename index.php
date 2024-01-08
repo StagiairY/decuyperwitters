@@ -632,7 +632,7 @@ include('include/header.php')
 
 
 <?php
-//include ('include/cta_nieuwsBrief.php')
+//includes ('includes/cta_nieuwsBrief.php')
 //?>
 
 
