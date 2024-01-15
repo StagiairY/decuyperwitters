@@ -122,72 +122,71 @@ include "includes/db.php";
         </li>
     </ul>
 
-
-
     <div class="container">
         <!-- Your existing admin dashboard code -->
         <!-- ... -->
 
         <?php
-        // Fetch categories grouped by main_category_id and ordered by order_column
-        $query = "SELECT main_category_id, id, name, image_path, order_column, archived FROM categories ORDER BY main_category_id, order_column";
+        // Fetch categories joined with main_category table, ordered by main_category_id and order_column
+        $query = "SELECT c.id, c.name, c.image_path, c.order_column, c.archived, c.main_category_id, mc.name as main_category_name
+              FROM categories c
+              INNER JOIN main_category mc ON c.main_category_id = mc.id
+              ORDER BY c.main_category_id, c.order_column";
+
         $result = $conn->query($query);
 
         if ($result) {
-            // Initialize an array to store categories grouped by main_category_id
-            $groupedCategories = [];
+            // Initialize variables to keep track of the current main category
+            $currentMainCategory = null;
 
             while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                // Check if the main_category_id is already a key in the groupedCategories array
-                if (!array_key_exists($row['main_category_id'], $groupedCategories)) {
-                    // If not, create a new array for that main_category_id
-                    $groupedCategories[$row['main_category_id']] = [];
+                // Check if the main category has changed
+                if ($currentMainCategory !== $row['main_category_id']) {
+                    // Display the main category name as a centered title
+                    echo '<div class="row">';
+                    echo '<div class="col-md-12 text-center"><h2>' . $row['main_category_name'] . '</h2></div>';
+                    $currentMainCategory = $row['main_category_id'];
                 }
 
-                // Add the category details to the array corresponding to its main_category_id
-                $groupedCategories[$row['main_category_id']][] = $row;
+                // Display each category within the main category
+                echo '<div class="col-md-3 mb-4">'; // Adjust the column size as per your preference (e.g., col-md-3 for 4 categories in a row)
+                echo '<div class="card position-relative';
+
+                // Check if the category is archived and add a class for styling
+                if ($row['archived']) {
+                    echo ' archived-category">';
+                } else {
+                    echo '">';
+                }
+
+                // Display the image if image_path is available
+                if (!empty($row['image_path'])) {
+                    echo '<img src="/' . $row['image_path'] . '" class="card-img-top" style="max-height: 200px;" alt="' . $row['name'] . ' Image">';
+                } else {
+                    echo '<img src="default_image.jpg" class="card-img-top" style="max-height: 200px;" alt="' . $row['name'] . ' Image">';
+                }
+
+                // Display order_column
+                echo '<div class="position-absolute top-0 start-0 px-2 py-1 bg-dark text-white rounded">' . $row['order_column'] . '</div>';
+
+                // Display card body
+                echo '<div class="card-body">';
+                echo '<h5 class="card-title">' . $row['name'] . '</h5>';
+                echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-outline-warning mr-3"><i class="fas fa-edit"></i> Edit</a>';
+                echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-outline-secondary "><i class="fas fa-file "></i> Open </a>';
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+
+                // Close the row after every four categories
+                if ($currentMainCategory !== null && $result->rowCount() % 4 == 0) {
+                    echo '</div>';
+                    $currentMainCategory = null;
+                }
             }
 
-            // Iterate through each main_category_id and its associated categories
-            foreach ($groupedCategories as $mainCategoryId => $categories) {
-                echo '<div class="row">';
-                foreach ($categories as $category) {
-                    echo '<div class="col-md-4 mb-4">';
-                    echo '<div class="card position-relative';
-
-                    // Check if the category is archived and add a class for styling
-                    if ($category['archived']) {
-                        echo ' archived-category">';
-                    } else {
-                        echo '">';
-                    }
-
-                    // Display the image if image_path is available
-                    if (!empty($category['image_path'])) {
-                        echo '<img src="/' . $category['image_path'] . '" class="card-img-top" alt="' . $category['name'] . ' Image">';
-
-                        // Add "gearchiveerd" text in the top-right corner if the category is archived
-                        if ($category['archived']) {
-                            echo '<div class="position-absolute top-0 end-0 p-2  text-white rounded" style="right: 0; ">gearchiveerd</div>';
-                        }
-
-
-                    } else {
-                        // Provide a default image or handle the case where image_path is empty
-                        echo '<img src="default_image.jpg" class="card-img-top" alt="' . $category['name'] . ' Image">';
-                    }
-
-                    // Add transparent text with order_column number
-                    echo '<div class="position-absolute top-0 start-0 px-2 py-1 bg-dark text-white rounded">' . $category['order_column'] . '</div>';
-
-                    echo '<div class="card-body">';
-                    echo '<h5 class="card-title">' . $category['name'] . '</h5>';
-                    echo '<a href="includes/edit_category.php?id=' . $category['id'] . '" class="btn btn-outline-warning mr-3"><i class="fas fa-edit"></i> Edit</a>';
-                    echo '<a href="includes/edit_category.php?id=' . $category['id'] . '" class="btn btn-outline-secondary "><i class="fas fa-file "></i> Open </a>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</div>';
-                }
+            // Close the last row if there are any categories
+            if ($currentMainCategory !== null) {
                 echo '</div>';
             }
         }
