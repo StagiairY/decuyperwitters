@@ -1,7 +1,7 @@
 <?php
-include('include/header.php')
+include('include/header.php');
+include ('include/db.php');
 ?>
-
 
 
 
@@ -228,244 +228,81 @@ include('include/header.php')
 
 
     <!--Dieren Summary-->
-    <div id="dieren" class="site-section services-1-wrap">
-        <div id="diensten" class="container">
-            <div class="row mb-5 justify-content-center text-center">
-                <div class="col-lg-7">
-                    <h3 class="section-subtitle">- dieren -</h3>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Rundvee.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/cows-producing-milk-gruyere-cheese-france-spring.jpg"
-                                 class="card-img-top p-0" alt="Rundvee Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Rundvee</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Paarden.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/horse-alezan-brown-ride-mane.jpg" class="card-img-top p-0"
-                                 alt="Paarden Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Paarden</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Kleine_hoefdieren.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/sheep.jpg" class="card-img-top p-0" alt="Kleine hoefdieren Image"
-                                 style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Kleine hoefdieren</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Stalstrooisel.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/hay-bedding.jpg" class="card-img-top p-0"
-                                 alt="Stalstrooisel Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Stalstrooisel</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Neerhofdieren.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/chicken-walking-middle-field.jpg" class="card-img-top p-0"
-                                 alt="Neerhofdieren Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Neerhofdieren</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Honden_en_katten.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/cat-dog-lie-together-floor.jpg" class="card-img-top p-0"
-                                 alt="Honden en katten Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Honden en katten</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Duiven.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/two-piggeons-sitting-stone-fence-park.jpg"
-                                 class="card-img-top p-0" alt="Duiven Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Duiven</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Vogels.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/olivebacked-sunbirds-feeding-child.jpg" class="card-img-top p-0"
-                                 alt="Vogels Image" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Vogels</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+
+
+
+                <?php
+                // Your PHP code to connect to the database and fetch categories with image paths goes here
+                try {
+                    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+                } catch (PDOException $e) {
+                    echo $e->getMessage();
+                }
+
+                // Fetch categories with image paths for "dieren"
+                $queryDieren = "SELECT id, name, image_path FROM categories WHERE name IN ('Rundvee', 'Paarden', 'Kleine hoefdieren', 'Stalstrooisel', 'Neerhofdieren', 'Honden en katten', 'Duiven', 'Vogels')";
+                $statementDieren = $pdo->prepare($queryDieren);
+                $statementDieren->execute();
+                $categoriesDieren = $statementDieren->fetchAll(PDO::FETCH_ASSOC);
+
+                echo '<div id="dieren" class="site-section services-1-wrap">';
+                echo '<div id="diensten" class="container">';
+                echo '<div class="row mb-5 justify-content-center text-center">';
+                echo '<div class="col-lg-7">';
+                echo '<h3 class="section-subtitle">- dieren -</h3>';
+                echo '</div>';
+                echo '</div>';
+                echo '<div class="row ">';
+                foreach ($categoriesDieren as $category) {
+                    echo '<div class="col-lg-3 col-md-6 categoryItem">';
+                    echo '<a href="./' . $category['name'] . '.php" class="service-link">';
+                    echo '<div>';
+                    echo '<img src="' . $category['image_path'] . '" class="card-img-top p-0" alt="' . $category['name'] . ' Image" style="background-color: white;">';
+                    echo '<div class="card-body text-center p-1 m-1">';
+                    echo '<h5 class="card-title">' . $category['name'] . '</h5>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</a>';
+                    echo '</div>';
+                }
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+
+                // Fetch categories with image paths for "huis en tuin"
+                $queryHuisEnTuin = "SELECT id, name, image_path FROM categories WHERE name IN ('Meststoffen', 'Potgrond', 'Boomschors', 'Graszaden', 'Sproeistoffen', 'Tuingereedschap', 'Zaden en planten', 'Laarzen en Jolly''s', 'Weide afsluiting', 'Antargaz', 'Houtpellets')";
+                $statementHuisEnTuin = $pdo->prepare($queryHuisEnTuin);
+                $statementHuisEnTuin->execute();
+                $categoriesHuisEnTuin = $statementHuisEnTuin->fetchAll(PDO::FETCH_ASSOC);
+
+                echo '<div id="huis-en-tuin" class=" bg2 site-section services-1-wrap   ">';
+                echo '<div class="p-5  row mb-5 justify-content-center text-center">';
+                echo '<div class="col-lg-7 ">';
+                echo '<h3 class="section-subtitle"> - huis en tuin -</h3>';
+                echo '</div>';
+                echo '</div>';
+                echo '<div class="container">';
+                echo '<div class="row g-5 ">';
+                foreach ($categoriesHuisEnTuin as $category) {
+                    echo '<div class="col-lg-3 col-md-6 categoryItem">';
+                    echo '<a href="./' . $category['name'] . '.php" class="service-link">';
+                    echo '<div>';
+                    echo '<img src="' . $category['image_path'] . '" class="card-img-top p-0" alt="' . $category['name'] . ' Image" style="background-color: white;">';
+                    echo '<div class="card-body text-center p-1 m-1">';
+                    echo '<h5 class="card-title">' . $category['name'] . '</h5>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</a>';
+                    echo '</div>';
+                }
+                echo '</div>';
+                echo '</div>';
+                echo '</div>';
+                ?>
             </div>
         </div>
     </div>
 
-
-    <!--huis en tuin-->
-    <div id="huis-en-tuin" class=" bg2 site-section services-1-wrap   ">
-        <div class="p-5  row mb-5 justify-content-center text-center">
-            <div class="col-lg-7 ">
-                <h3 class="section-subtitle"> - huis en tuin -</h3>
-            </div>
-        </div>
-        <div class="container">
-
-            <div class="row g-5 ">
-                <div class="col-lg-3 col-md-6 categoryItem ">
-                    <a href="./Meststoffen.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/applying-fertilizer-big-green-beautiful-bush-flowers-before-bloom.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-meststof" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Meststoffen</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Potgrond.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/hand-holding-peat-moss-organic-matter-improve-soil-agriculture-organic-plant-growing-ecology-concept.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-schep-potgrond"
-                                 style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Potgrond</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Boomschors.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/beautiful-macro-wood-concept.jpg" class="card-img-top p-0"
-                                 alt="Afbeelding-boom-schors" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Boomschors</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Graszaden.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/wheat-grain-female-hand-green-grass-background.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-grass" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Graszaden</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Sproeistoffen.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-spray-fertilizer"
-                                 style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Sproeistoffen</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Tuingereedschap.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/row-gardening-tools-soil-background.jpg" class="card-img-top p-0"
-                                 alt="Afbeelding-garden-tools" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Tuingereedschap</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Zaden_en_planten.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/close-up-picture-hand-holding-planting-seed-plant.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-seeds" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Zaden en planten</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Laarzen_en_Jolly's.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/close-up-gardening-accesories.jpg" class="card-img-top p-0"
-                                 alt="Afbeelding-laarzen" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Laarzen en Jolly's</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Weide_afsluiting.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/wooden-fence.jpg" class="card-img-top p-0" alt="fence"
-                                 style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Weide afsluiting</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Antargaz.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/man-holding-bottle-butane-gas-red-background.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-propane-fles"
-                                 style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Antargaz</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-3 col-md-6 categoryItem">
-                    <a href="./Houtpellets.php" class="service-link">
-                        <div >
-                            <img src="images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg"
-                                 class="card-img-top p-0" alt="Afbeelding-hout" style="background-color: white;">
-                            <div class="card-body text-center p-1 m-1">
-                                <h5 class="card-title">Houtpellets</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <div class="site-section pb-0">

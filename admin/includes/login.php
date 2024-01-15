@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     include "db.php";
 
     // Retrieve the hashed password from the database based on the provided username
-    $stmt = $conn->prepare("SELECT id, username, password_hash FROM users WHERE username = :username");
+    $stmt = $conn->prepare("SELECT id, username, password FROM users WHERE username = :username");
     $stmt->bindParam(':username', $username, PDO::PARAM_STR);
     $stmt->execute();
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //        echo "Hashed Provided Password: " . password_hash($password, PASSWORD_DEFAULT) . "<br>";
 //        echo "Database Hashed Password: " . $result['password_hash'] . "<br>";
 
-        if (password_verify($password, $result['password_hash'])) {
+        if (password_verify($password, $result['password'])) {
             // Authentication successful
             $_SESSION['user_id'] = $result['id'];
             header("Location: ../admin_dashboard.php");
