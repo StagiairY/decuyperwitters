@@ -51,10 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<!-- ... rest of the HTML ... -->
-
-
-<!-- ... rest of the HTML ... -->
 
 
 <!DOCTYPE html>
@@ -67,7 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            background-color: #007BFF;
+            background: url('/images/admin/grass-with-clouds.jpg') no-repeat center center fixed;
+            opacity: 0.9;
+            background-size: cover;
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
@@ -77,13 +75,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             height: 100vh;
         }
 
+
         .container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
-            text-align: center;
+
         }
 
         h1 {
@@ -94,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         form {
             display: flex;
             flex-direction: column;
-            align-items: center;
+
         }
 
         label {
@@ -133,6 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 
 <body>
+
 <div class="container">
     <h1>Login</h1>
     <!-- Display error message if authentication fails -->

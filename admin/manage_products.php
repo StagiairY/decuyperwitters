@@ -13,187 +13,158 @@ if ($result) {
 $conn = null;
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manage Products</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .category-card * {
-            margin-bottom: 20px;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .category-card:hover {
-            transform: scale(1.05);
-        }
-
-        .category-title {
-            text-align: center;
-        }
-    </style>
-</head>
-
-<body>
 <?php include "admin_dashboard.php"; ?>
 
-<div class="container">
-    <h2 class="text-center mb-4">Manage Products</h2>
 
-    <div class="row">
-        <?php foreach ($categories as $category) : ?>
-            <div class="col-md-4">
-                <div class="card category-card" data-toggle="modal"
-                     data-target="#categoryModal<?php echo $category['id']; ?>">
-                    <div class="card-body">
-                        <h5 class="card-title category-title"><?php echo $category['name']; ?></h5>
-                    </div>
+<h2 class="text-center mb-4">Manage Products</h2>
+
+<div class="row">
+    <?php foreach ($categories as $category) : ?>
+        <div class="col-md-4 p-2 m-0">
+            <div class="card category-card" data-toggle="modal"
+                 data-target="#categoryModal<?php echo $category['id']; ?>">
+                <div class="card-body">
+                    <h5 class="card-title category-title"><?php echo $category['name']; ?></h5>
                 </div>
             </div>
+        </div>
 
-            <div class="modal fade" id="categoryModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog"
-                 aria-labelledby="categoryModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="categoryModalLabel"><?php echo $category['name']; ?>
-                                Products</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <table class="table product-table">
-                                <thead>
-                                <tr>
-<!--                                    <th>ID</th>-->
-                                    <th>Name</th>
-                                    <th>Description</th>
-                                    <th>weight</th>
-                                    <th>Price</th>
-                                    <th>Action</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <?php
-                                include "includes/db.php";
+        <div class="modal fade" id="categoryModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog"
+             aria-labelledby="categoryModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="categoryModalLabel"><?php echo $category['name']; ?>
+                            Products</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table class="table product-table">
+                            <thead>
+                            <tr>
+                                <!--                                    <th>ID</th>-->
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>weight</th>
+                                <th>Price</th>
+                                <th>Action</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <?php
+                            include "includes/db.php";
 
-                                if ($conn === null) {
-                                    die("Database connection failed");
-                                }
+                            if ($conn === null) {
+                                die("Database connection failed");
+                            }
 
-                                $productQuery = "SELECT * FROM products WHERE category_id = :category_id";
-                                $productStatement = $conn->prepare($productQuery);
-                                $productStatement->bindParam(':category_id', $category['id']);
-                                $productStatement->execute();
-                                $products = $productStatement->fetchAll(PDO::FETCH_ASSOC);
+                            $productQuery = "SELECT * FROM products WHERE category_id = :category_id";
+                            $productStatement = $conn->prepare($productQuery);
+                            $productStatement->bindParam(':category_id', $category['id']);
+                            $productStatement->execute();
+                            $products = $productStatement->fetchAll(PDO::FETCH_ASSOC);
 
-                                foreach ($products as $product) : ?>
-                                    <tr data-product-id="<?php echo $product['id']; ?>">
-<!--                                        <td>--><?php //echo $product['id']; ?><!--</td>-->
-                                        <td contenteditable="true"><?php echo $product['name']; ?></td>
-                                        <td contenteditable="true"><?php echo $product['description']; ?></td>
-                                        <td contenteditable="true"><?php echo $product['weight']; ?></td>
-                                        <td contenteditable="true"><?php echo $product['price']; ?></td>
-                                        <td>
+                            foreach ($products as $product) : ?>
+                                <tr data-product-id="<?php echo $product['id']; ?>">
+                                    <!--                                        <td>-->
+                                    <?php //echo $product['id']; ?><!--</td>-->
+                                    <td contenteditable="true"><?php echo $product['name']; ?></td>
+                                    <td contenteditable="true"><?php echo $product['description']; ?></td>
+                                    <td contenteditable="true"><?php echo $product['weight']; ?></td>
+                                    <td contenteditable="true"><?php echo $product['price']; ?></td>
+                                    <td>
                                             <span class="delete-product" data-product-id="<?php echo $product['id']; ?>"
                                                   style="cursor: pointer;">🗑</span>
-                                        </td>
-                                    </tr>
-                                <?php endforeach;
+                                    </td>
+                                </tr>
+                            <?php endforeach;
 
-                                $conn = null;
-                                ?>
-                                </tbody>
-                            </table>
-
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#addProductModal<?php echo $category['id']; ?>">
-                                <i class="fas fa-plus"></i>
-                            </button>
+                            $conn = null;
+                            ?>
+                            </tbody>
+                        </table>
 
 
-                            <button type="button" class="btn btn-primary save-changes-btn">
-                                <i class="fas fa-save"></i>
-                            </button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#addProductModal<?php echo $category['id']; ?>">
+                            <i class="fas fa-plus"></i>
+                        </button>
 
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">
-                                <i class="fas fa-times"></i>
-                            </button>
 
-                        </div>
+                        <button type="button" class="btn btn-primary save-changes-btn">
+                            <i class="fas fa-save"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                            <i class="fas fa-times"></i>
+                        </button>
+
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="modal fade addproductmodal" id="addProductModal<?php echo $category['id']; ?>" tabindex="-1" role="dialog"
-                 aria-labelledby="addProductModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="addProductModalLabel">Add Product
-                                to <?php echo $category['name']; ?></h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="form-group">
-                                    <label for="productName<?php echo $category['id']; ?>">Product Name</label>
-                                    <input type="text" class="form-control"
-                                           id="productName<?php echo $category['id']; ?>" name="productName" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="productDescription<?php echo $category['id']; ?>">Product
-                                        Description</label>
-                                    <textarea class="form-control" id="productDescription<?php echo $category['id']; ?>"
-                                              name="productDescription" style="height: 200px;"></textarea>
+        <div class="modal fade addproductmodal" id="addProductModal<?php echo $category['id']; ?>" tabindex="-1"
+             role="dialog"
+             aria-labelledby="addProductModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addProductModalLabel">Add Product
+                            to <?php echo $category['name']; ?></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="productName<?php echo $category['id']; ?>">Product Name</label>
+                                <input type="text" class="form-control"
+                                       id="productName<?php echo $category['id']; ?>" name="productName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productDescription<?php echo $category['id']; ?>">Product
+                                    Description</label>
+                                <textarea class="form-control" id="productDescription<?php echo $category['id']; ?>"
+                                          name="productDescription" style="height: 200px;"></textarea>
 
-                                </div>
-                                <div class="form-group">
-                                    <label for="productPrice<?php echo $category['id']; ?>">Product Price</label>
-                                    <input type="number" class="form-control"
-                                           id="productPrice<?php echo $category['id']; ?>" name="productPrice"
-                                           step="0.01" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="productWeight<?php echo $category['id']; ?>">Product Weight</label>
-                                    <input type="number" class="form-control"
-                                           id="productWeight<?php echo $category['id']; ?>" name="productWeight"
-                                           step="0.01" required>
-                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="productPrice<?php echo $category['id']; ?>">Product Price</label>
+                                <input type="number" class="form-control"
+                                       id="productPrice<?php echo $category['id']; ?>" name="productPrice"
+                                       step="0.01" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="productWeight<?php echo $category['id']; ?>">Product Weight</label>
+                                <input type="number" class="form-control"
+                                       id="productWeight<?php echo $category['id']; ?>" name="productWeight"
+                                       step="0.01" required>
+                            </div>
 
-                                <input type="hidden" id="categoryId<?php echo $category['id']; ?>"
-                                       value="<?php echo $category['id']; ?>">
-                                <button type="button" class="btn btn-primary add-product-btn">Add Product</button>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
+                            <input type="hidden" id="categoryId<?php echo $category['id']; ?>"
+                                   value="<?php echo $category['id']; ?>">
+                            <button type="button" class="btn btn-primary add-product-btn">Add Product</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
-        <?php endforeach; ?>
-    </div>
+        </div>
+    <?php endforeach; ?>
+</div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-
-
 
 
     jQuery(document).ready(function ($) {
@@ -245,8 +216,6 @@ $conn = null;
             var productWeight = $('#productWeight' + categoryId).val();
 
 
-
-
             // if (productName === '') {
             //     alert('Product Name cannot be empty.');
             //     return;
@@ -286,13 +255,11 @@ $conn = null;
                     $('.product-table tbody').append(newRow);
 
 
-
                 },
                 error: function (error) {
                     console.error('Error adding product: ' + error.statusText);
                 }
             });
-
 
 
         });
@@ -333,5 +300,6 @@ $conn = null;
 
 
 </body>
+
 
 </html>

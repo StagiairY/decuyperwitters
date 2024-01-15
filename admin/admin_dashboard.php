@@ -11,14 +11,19 @@ include "includes/auth.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="admin/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            background-color: #f8f9fa;
+            /*background: url('/images/admin/pferde-hutte.jpg') no-repeat center center fixed;*/
+            background-size: cover;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.9); /* Change the background color and opacity as needed */
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -49,8 +54,25 @@ include "includes/auth.php";
             text-decoration: none;
             color: #a71d2a;
         }
+
+        .category-card * {
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+
+        .category-title {
+            text-align: center;
+        }
+
+
     </style>
 </head>
+
 
 <body>
 <div class="container">
@@ -68,13 +90,7 @@ include "includes/auth.php";
             <a class="nav-link" href="manage_products.php">Manage Products</a>
         </li>
     </ul>
-</div>
 
 
-<!-- Bootstrap JS and Popper.js (Required for Bootstrap features) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
 
-</html>
+
