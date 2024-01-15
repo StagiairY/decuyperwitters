@@ -60,9 +60,12 @@ if (isset($_GET['id'])) {
 
 <body>
 <div class="container">
+    <div class="mt-3">
+        <a href="../admin_dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
     <div class="card">
         <div class="card-header bg-primary text-white">
-            <h1 class="mb-0">Edit Category: <?php echo $category['name']; ?></h1>
+            <h1 class="mb-0 text-white"><?php echo $category['name']; ?></h1>
         </div>
         <div class="card-body">
 
@@ -93,6 +96,8 @@ if (isset($_GET['id'])) {
                 </div>
                 <input type="hidden" name="category_id" value="<?php echo $category['id']; ?>">
                 <button type="submit" class="btn btn-primary">Update Category</button>
+
+
             </form>
         </div>
     </div>

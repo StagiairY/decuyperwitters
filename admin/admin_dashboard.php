@@ -15,6 +15,14 @@ include "includes/db.php";
     <link rel="stylesheet" href="admin/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CSS link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
     <style>
         body {
             background-size: cover;
@@ -114,44 +122,78 @@ include "includes/db.php";
         </li>
     </ul>
 
-    <!-- Display categories with edit functionality -->
+
+
     <div class="container">
         <!-- Your existing admin dashboard code -->
         <!-- ... -->
 
-        <div class="row">
-            <?php
-            // Fetch categories
-            $query = "SELECT id, name, image_path FROM categories";
-            $result = $conn->query($query);
+        <?php
+        // Fetch categories grouped by main_category_id and ordered by order_column
+        $query = "SELECT main_category_id, id, name, image_path, order_column, archived FROM categories ORDER BY main_category_id, order_column";
+        $result = $conn->query($query);
 
-            if ($result) {
-                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+        if ($result) {
+            // Initialize an array to store categories grouped by main_category_id
+            $groupedCategories = [];
+
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                // Check if the main_category_id is already a key in the groupedCategories array
+                if (!array_key_exists($row['main_category_id'], $groupedCategories)) {
+                    // If not, create a new array for that main_category_id
+                    $groupedCategories[$row['main_category_id']] = [];
+                }
+
+                // Add the category details to the array corresponding to its main_category_id
+                $groupedCategories[$row['main_category_id']][] = $row;
+            }
+
+            // Iterate through each main_category_id and its associated categories
+            foreach ($groupedCategories as $mainCategoryId => $categories) {
+                echo '<div class="row">';
+                foreach ($categories as $category) {
                     echo '<div class="col-md-4 mb-4">';
-                    echo '<div class="card">';
+                    echo '<div class="card position-relative';
 
-                    // Display the image if image_path is available
-                    if (!empty($row['image_path'])) {
-                        echo '<img src="/' . $row['image_path'] . '" class="card-img-top" alt="' . $row['name'] . ' Image">';
+                    // Check if the category is archived and add a class for styling
+                    if ($category['archived']) {
+                        echo ' archived-category">';
                     } else {
-                        // Provide a default image or handle the case where image_path is empty
-                        echo '<img src="default_image.jpg" class="card-img-top" alt="' . $row['name'] . ' Image">';
+                        echo '">';
                     }
 
+                    // Display the image if image_path is available
+                    if (!empty($category['image_path'])) {
+                        echo '<img src="/' . $category['image_path'] . '" class="card-img-top" alt="' . $category['name'] . ' Image">';
+
+                        // Add "gearchiveerd" text in the top-right corner if the category is archived
+                        if ($category['archived']) {
+                            echo '<div class="position-absolute top-0 end-0 p-2  text-white rounded" style="right: 0; ">gearchiveerd</div>';
+                        }
+
+
+                    } else {
+                        // Provide a default image or handle the case where image_path is empty
+                        echo '<img src="default_image.jpg" class="card-img-top" alt="' . $category['name'] . ' Image">';
+                    }
+
+                    // Add transparent text with order_column number
+                    echo '<div class="position-absolute top-0 start-0 px-2 py-1 bg-dark text-white rounded">' . $category['order_column'] . '</div>';
+
                     echo '<div class="card-body">';
-                    echo '<h5 class="card-title">' . $row['name'] . '</h5>';
-                    echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-primary">Edit Category</a>';
+                    echo '<h5 class="card-title">' . $category['name'] . '</h5>';
+                    echo '<a href="includes/edit_category.php?id=' . $category['id'] . '" class="btn btn-outline-warning mr-3"><i class="fas fa-edit"></i> Edit</a>';
+                    echo '<a href="includes/edit_category.php?id=' . $category['id'] . '" class="btn btn-outline-secondary "><i class="fas fa-file "></i> Open </a>';
                     echo '</div>';
                     echo '</div>';
                     echo '</div>';
                 }
+                echo '</div>';
             }
-            ?>
-        </div>
+        }
+        ?>
     </div>
 
-    <!-- Include your footer content here -->
-</div>
 
 <script>
     function showEditForm(categoryId) {
