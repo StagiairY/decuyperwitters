@@ -228,81 +228,57 @@ include ('include/db.php');
 
 
     <!--Dieren Summary-->
+<?php
+try {
+    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+}
 
+// Fetch main categories
+$queryMainCategories = "SELECT id, name FROM main_category";
+$statementMainCategories = $pdo->prepare($queryMainCategories);
+$statementMainCategories->execute();
+$mainCategories = $statementMainCategories->fetchAll(PDO::FETCH_ASSOC);
 
+// Loop through main categories
+foreach ($mainCategories as $mainCategory) {
+    $mainCategoryId = $mainCategory['id'];
+    $mainCategoryName = $mainCategory['name'];
 
-                <?php
-                // Your PHP code to connect to the database and fetch categories with image paths goes here
-                try {
-                    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
-                } catch (PDOException $e) {
-                    echo $e->getMessage();
-                }
+    // Fetch categories with image paths for the current main category
+    $queryCategories = "SELECT id, name, image_path FROM categories WHERE main_category_id = :main_category_id AND archived = false ORDER BY order_column";
+    $statementCategories = $pdo->prepare($queryCategories);
+    $statementCategories->bindParam(':main_category_id', $mainCategoryId);
+    $statementCategories->execute();
+    $categories = $statementCategories->fetchAll(PDO::FETCH_ASSOC);
 
-                // Fetch categories with image paths for "dieren"
-                $queryDieren = "SELECT id, name, image_path FROM categories WHERE name IN ('Rundvee', 'Paarden', 'Kleine hoefdieren', 'Stalstrooisel', 'Neerhofdieren', 'Honden en katten', 'Duiven', 'Vogels')";
-                $statementDieren = $pdo->prepare($queryDieren);
-                $statementDieren->execute();
-                $categoriesDieren = $statementDieren->fetchAll(PDO::FETCH_ASSOC);
+    echo '<div id="' . strtolower(str_replace(' ', '-', $mainCategoryName)) . '" class="site-section services-1-wrap">';
+    echo '<div id="diensten" class="container">';
+    echo '<div class="row mb-5 justify-content-center text-center">';
+    echo '<div class="col-lg-7">';
+    echo '<h3 class="section-subtitle">- ' . strtolower($mainCategoryName) . ' -</h3>';
+    echo '</div>';
+    echo '</div>';
+    echo '<div class="row ">';
+    foreach ($categories as $category) {
+        echo '<div class="col-lg-3 col-md-6 categoryItem">';
+        echo '<a href="./' . $category['name'] . '.php" class="service-link">';
+        echo '<div>';
+        echo '<img src="' . $category['image_path'] . '" class="card-img-top p-0" alt="' . $category['name'] . ' Image" style="background-color: white;">';
+        echo '<div class="card-body text-center p-1 m-1">';
+        echo '<h5 class="card-title">' . $category['name'] . '</h5>';
+        echo '</div>';
+        echo '</div>';
+        echo '</a>';
+        echo '</div>';
+    }
+    echo '</div>';
+    echo '</div>';
+    echo '</div>';
+}
 
-                echo '<div id="dieren" class="site-section services-1-wrap">';
-                echo '<div id="diensten" class="container">';
-                echo '<div class="row mb-5 justify-content-center text-center">';
-                echo '<div class="col-lg-7">';
-                echo '<h3 class="section-subtitle">- dieren -</h3>';
-                echo '</div>';
-                echo '</div>';
-                echo '<div class="row ">';
-                foreach ($categoriesDieren as $category) {
-                    echo '<div class="col-lg-3 col-md-6 categoryItem">';
-                    echo '<a href="./' . $category['name'] . '.php" class="service-link">';
-                    echo '<div>';
-                    echo '<img src="' . $category['image_path'] . '" class="card-img-top p-0" alt="' . $category['name'] . ' Image" style="background-color: white;">';
-                    echo '<div class="card-body text-center p-1 m-1">';
-                    echo '<h5 class="card-title">' . $category['name'] . '</h5>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</a>';
-                    echo '</div>';
-                }
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-
-                // Fetch categories with image paths for "huis en tuin"
-                $queryHuisEnTuin = "SELECT id, name, image_path FROM categories WHERE name IN ('Meststoffen', 'Potgrond', 'Boomschors', 'Graszaden', 'Sproeistoffen', 'Tuingereedschap', 'Zaden en planten', 'Laarzen en Jolly''s', 'Weide afsluiting', 'Antargaz', 'Houtpellets')";
-                $statementHuisEnTuin = $pdo->prepare($queryHuisEnTuin);
-                $statementHuisEnTuin->execute();
-                $categoriesHuisEnTuin = $statementHuisEnTuin->fetchAll(PDO::FETCH_ASSOC);
-
-                echo '<div id="huis-en-tuin" class=" bg2 site-section services-1-wrap   ">';
-                echo '<div class="p-5  row mb-5 justify-content-center text-center">';
-                echo '<div class="col-lg-7 ">';
-                echo '<h3 class="section-subtitle"> - huis en tuin -</h3>';
-                echo '</div>';
-                echo '</div>';
-                echo '<div class="container">';
-                echo '<div class="row g-5 ">';
-                foreach ($categoriesHuisEnTuin as $category) {
-                    echo '<div class="col-lg-3 col-md-6 categoryItem">';
-                    echo '<a href="./' . $category['name'] . '.php" class="service-link">';
-                    echo '<div>';
-                    echo '<img src="' . $category['image_path'] . '" class="card-img-top p-0" alt="' . $category['name'] . ' Image" style="background-color: white;">';
-                    echo '<div class="card-body text-center p-1 m-1">';
-                    echo '<h5 class="card-title">' . $category['name'] . '</h5>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '</a>';
-                    echo '</div>';
-                }
-                echo '</div>';
-                echo '</div>';
-                echo '</div>';
-                ?>
-            </div>
-        </div>
-    </div>
-
+?>
 
 
     <div class="site-section pb-0">

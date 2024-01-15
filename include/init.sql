@@ -91,3 +91,112 @@ CREATE TABLE products (
 
 -- Insert data into Products Table if needed
 -- Modify this part based on your specific product data
+
+
+
+
+
+
+
+
+--
+-- ==================UPDATE==================
+--
+--
+
+-- Create Main Categories Table
+CREATE TABLE main_category (
+                               id SERIAL PRIMARY KEY,
+                               name VARCHAR(255) NOT NULL
+);
+
+-- Insert data into Main Categories Table
+INSERT INTO main_category (name) VALUES
+                                     ('Dieren'),
+                                     ('Huis en Tuin');
+
+-- Create Categories Table
+CREATE TABLE categories (
+                            id SERIAL PRIMARY KEY,
+                            name VARCHAR(255) NOT NULL,
+                            image_path VARCHAR(255) NOT NULL,
+                            main_category_id INT REFERENCES main_category(id) ON DELETE CASCADE
+);
+
+-- Insert data into Categories Table
+INSERT INTO categories (name, image_path, main_category_id) VALUES
+                                                                ('Rundvee', 'images/Diensten/cows-producing-milk-gruyere-cheese-france-spring.jpg', 1),
+                                                                ('Paarden', 'images/Diensten/horse-alezan-brown-ride-mane.jpg', 1),
+                                                                ('Kleine hoefdieren', 'images/Diensten/sheep.jpg', 1),
+                                                                ('Stalstrooisel', 'images/Diensten/hay-bedding.jpg', 1),
+                                                                ('Neerhofdieren', 'images/Diensten/chicken-walking-middle-field.jpg', 1),
+                                                                ('Honden en katten', 'images/Diensten/cat-dog-lie-together-floor.jpg', 1),
+                                                                ('Duiven', 'images/Diensten/two-piggeons-sitting-stone-fence-park.jpg', 1),
+                                                                ('Vogels', 'images/Diensten/olivebacked-sunbirds-feeding-child.jpg', 1),
+                                                                ('Meststoffen', 'images/Diensten/applying-fertilizer-big-green-beautiful-bush-flowers-before-bloom.jpg', 2),
+                                                                ('Potgrond', 'images/Diensten/hand-holding-peat-moss-organic-matter-improve-soil-agriculture-organic-plant-growing-ecology-concept.jpg', 2),
+                                                                ('Boomschors', 'images/Diensten/beautiful-macro-wood-concept.jpg', 2),
+                                                                ('Graszaden', 'images/Diensten/wheat-grain-female-hand-green-grass-background.jpg', 2),
+                                                                ('Sproeistoffen', 'images/Diensten/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron.jpg', 2),
+                                                                ('Tuingereedschap', 'images/Diensten/row-gardening-tools-soil-background.jpg', 2),
+                                                                ('Zaden en planten', 'images/Diensten/close-up-picture-hand-holding-planting-seed-plant.jpg', 2),
+                                                                ('Laarzen en Jolly''s', 'images/Diensten/close-up-gardening-accesories.jpg', 2),
+                                                                ('Weide afsluiting', 'images/Diensten/wooden-fence.jpg', 2),
+                                                                ('Antargaz', 'images/Diensten/man-holding-bottle-butane-gas-red-background.jpg', 2),
+                                                                ('Houtpellets', 'images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg', 2);
+
+
+
+
+
+-- ========================================================================================================================
+
+
+
+
+
+-- Create Main Categories Table
+CREATE TABLE main_category (
+                               id SERIAL PRIMARY KEY,
+                               name VARCHAR(255) NOT NULL
+);
+
+-- Insert data into Main Categories Table
+INSERT INTO main_category (name) VALUES
+                                     ('Dieren'),
+                                     ('Huis en Tuin');
+
+-- Create Categories Table
+CREATE TABLE categories (
+                            id SERIAL PRIMARY KEY,
+                            name VARCHAR(255) NOT NULL,
+                            image_path VARCHAR(255) NOT NULL,
+                            order_column INT DEFAULT 0,
+                            archived BOOLEAN DEFAULT false,
+                            main_category_id INT REFERENCES main_category(id) ON DELETE CASCADE,
+                            created_at TIMESTAMP DEFAULT current_timestamp,
+                            updated_at TIMESTAMP DEFAULT current_timestamp
+);
+
+-- Insert data into Categories Table
+INSERT INTO categories (name, image_path, order_column, archived, main_category_id)
+VALUES
+    ('Rundvee', 'images/Diensten/cows-producing-milk-gruyere-cheese-france-spring.jpg', 1, false, 1),
+    ('Paarden', 'images/Diensten/horse-alezan-brown-ride-mane.jpg', 2, false, 1),
+    ('Kleine hoefdieren', 'images/Diensten/sheep.jpg', 3, false, 1),
+    ('Stalstrooisel', 'images/Diensten/hay-bedding.jpg', 4, false, 1),
+    ('Neerhofdieren', 'images/Diensten/chicken-walking-middle-field.jpg', 5, false, 1),
+    ('Honden en katten', 'images/Diensten/cat-dog-lie-together-floor.jpg', 6, false, 1),
+    ('Duiven', 'images/Diensten/two-piggeons-sitting-stone-fence-park.jpg', 7, false, 1),
+    ('Vogels', 'images/Diensten/olivebacked-sunbirds-feeding-child.jpg', 8, false, 1),
+    ('Meststoffen', 'images/Diensten/applying-fertilizer-big-green-beautiful-bush-flowers-before-bloom.jpg', 1, false, 2),
+    ('Potgrond', 'images/Diensten/hand-holding-peat-moss-organic-matter-improve-soil-agriculture-organic-plant-growing-ecology-concept.jpg', 2, false, 2),
+    ('Boomschors', 'images/Diensten/beautiful-macro-wood-concept.jpg', 3, false, 2),
+    ('Graszaden', 'images/Diensten/wheat-grain-female-hand-green-grass-background.jpg', 4, false, 2),
+    ('Sproeistoffen', 'images/Diensten/farmer-spraying-vegetables-garden-with-herbicides-man-black-apron.jpg', 5, false, 2),
+    ('Tuingereedschap', 'images/Diensten/row-gardening-tools-soil-background.jpg', 6, false, 2),
+    ('Zaden en planten', 'images/Diensten/close-up-picture-hand-holding-planting-seed-plant.jpg', 7, false, 2),
+    ('Laarzen en Jolly''s', 'images/Diensten/close-up-gardening-accesories.jpg', 8, false, 2),
+    ('Weide afsluiting', 'images/Diensten/wooden-fence.jpg', 9, false, 2),
+    ('Antargaz', 'images/Diensten/man-holding-bottle-butane-gas-red-background.jpg', 10, false, 2),
+    ('Houtpellets', 'images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg', 11, false, 2);

@@ -1,6 +1,7 @@
 <!-- admin_dashboard.php -->
 <?php
 include "includes/auth.php";
+include "includes/db.php";
 ?>
 
 <!DOCTYPE html>
@@ -16,14 +17,13 @@ include "includes/auth.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
-            /*background: url('/images/admin/pferde-hutte.jpg') no-repeat center center fixed;*/
             background-size: cover;
             margin: 0;
             padding: 0;
         }
 
         .container {
-            background-color: rgba(255, 255, 255, 0.9); /* Change the background color and opacity as needed */
+            background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
@@ -69,7 +69,24 @@ include "includes/auth.php";
             text-align: center;
         }
 
+        .edit-link {
+            color: #28a745;
+            cursor: pointer;
+        }
 
+        .edit-link:hover {
+            text-decoration: none;
+            color: #218838;
+        }
+
+        .edit-form {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 
@@ -82,6 +99,12 @@ include "includes/auth.php";
         <h1>Admin Dashboard</h1>
         <a href="includes/logout.php" class="logout-link">Logout</a>
     </div>
+
+
+
+
+
+
     <ul class="nav nav-pills">
         <!-- <li class="nav-item">
             <a class="nav-link" href="manage_categories.php">Manage Categories</a>
@@ -91,6 +114,50 @@ include "includes/auth.php";
         </li>
     </ul>
 
+    <!-- Display categories with edit functionality -->
+    <div class="container">
+        <!-- Your existing admin dashboard code -->
+        <!-- ... -->
 
+        <div class="row">
+            <?php
+            // Fetch categories
+            $query = "SELECT id, name, image_path FROM categories";
+            $result = $conn->query($query);
 
+            if ($result) {
+                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo '<div class="col-md-4 mb-4">';
+                    echo '<div class="card">';
 
+                    // Display the image if image_path is available
+                    if (!empty($row['image_path'])) {
+                        echo '<img src="/' . $row['image_path'] . '" class="card-img-top" alt="' . $row['name'] . ' Image">';
+                    } else {
+                        // Provide a default image or handle the case where image_path is empty
+                        echo '<img src="default_image.jpg" class="card-img-top" alt="' . $row['name'] . ' Image">';
+                    }
+
+                    echo '<div class="card-body">';
+                    echo '<h5 class="card-title">' . $row['name'] . '</h5>';
+                    echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-primary">Edit Category</a>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</div>';
+                }
+            }
+            ?>
+        </div>
+    </div>
+
+    <!-- Include your footer content here -->
+</div>
+
+<script>
+    function showEditForm(categoryId) {
+        var editForm = document.getElementById('edit-form-' + categoryId);
+        editForm.style.display = (editForm.style.display === 'none' || editForm.style.display === '') ? 'block' : 'none';
+    }
+</script>
+</body>
+</html>
