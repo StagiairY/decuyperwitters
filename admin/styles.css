@@ -1,4 +1,25 @@
-* {
-    color:red;
-    background: green;
+
+
+/* Add this CSS in your style sheet or within the HTML file's style tag */
+
+/* Style for the Archived marker */
+.archived-marker {
+    background-color: #dc3545; /* Bootstrap's danger color */
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+/* Style for the entire card of archived categories */
+.archived-category {
+    border: 2px solid #dc3545; /* Border color for archived categories */
+}
+
+/* Hover effect for the entire card of archived categories */
+.archived-category:hover {
+    border: 2px solid #c82333; /* Darker shade for hover effect */
 }

@@ -200,3 +200,34 @@ VALUES
     ('Weide afsluiting', 'images/Diensten/wooden-fence.jpg', 9, false, 2),
     ('Antargaz', 'images/Diensten/man-holding-bottle-butane-gas-red-background.jpg', 10, false, 2),
     ('Houtpellets', 'images/Diensten/eco-fuel-wooden-pellets-with-firewood.jpg', 11, false, 2);
+
+
+
+
+
+
+
+-- =============================new update=============================
+
+CREATE TABLE IF NOT EXISTS public.page_content
+(
+    id serial PRIMARY KEY,
+    category_id integer REFERENCES public.categories(id),
+    title character varying(255) NOT NULL,
+    content text,
+    image_path character varying(255),
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS public.products
+(
+    id serial PRIMARY KEY,
+    category_id integer REFERENCES public.categories(id),
+    name character varying(255) NOT NULL,
+    weight numeric,
+    price numeric,
+    description text,
+    created_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP
+);
