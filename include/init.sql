@@ -437,3 +437,22 @@ CREATE TABLE IF NOT EXISTS products (
                                         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                                         updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+
+
+
+
+
+
+
+-- Create Page Description Table
+CREATE TABLE IF NOT EXISTS page_description (
+                                                id SERIAL PRIMARY KEY,
+                                                category_id INTEGER REFERENCES categories(id),
+                                                description TEXT
+);
+
+-- Insert Dummy Data for Category ID 39
+INSERT INTO page_description (category_id, description, link)
+VALUES
+    (39, 'This is a dummy description for category ID 39.', 'https://example.com/dummy-link');

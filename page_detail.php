@@ -2,7 +2,6 @@
 // Assuming you have a database connection
 include "include/db.php";
 
-
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $db_user, $db_password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -14,26 +13,45 @@ try {
 // Retrieve category ID from the URL
 $category_id = isset($_GET['category_id']) ? $_GET['category_id'] : 1; // Default to 1 if not provided
 
-// Fetch page_content for the selected category
-$query = "SELECT title, content, image_path FROM page_content WHERE category_id = :category_id";
-$statement = $pdo->prepare($query);
-$statement->bindParam(':category_id', $category_id);
-$statement->execute();
-$pageContent = $statement->fetchAll(PDO::FETCH_ASSOC);
+// Fetch page details for the selected category
+$queryDesc = "SELECT title, description FROM page_description WHERE category_id = :category_id";
+$statementDesc = $pdo->prepare($queryDesc);
+$statementDesc->bindParam(':category_id', $category_id);
+$statementDesc->execute();
+$pageDescription = $statementDesc->fetch(PDO::FETCH_ASSOC);
+
+// Fetch page content for the selected category
+$queryContent = "SELECT title, content, image_path FROM page_content WHERE category_id = :category_id";
+$statementContent = $pdo->prepare($queryContent);
+$statementContent->bindParam(':category_id', $category_id);
+$statementContent->execute();
+$pageContent = $statementContent->fetchAll(PDO::FETCH_ASSOC);
+
+// Fetch dummy products data for the selected category
+$queryProducts = "SELECT name, weight, price, description, image_path FROM products WHERE category_id = :category_id";
+$statementProducts = $pdo->prepare($queryProducts);
+$statementProducts->bindParam(':category_id', $category_id);
+$statementProducts->execute();
+$products = $statementProducts->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?php
-include "include/header.php";
-?>
+<?php include "include/header.php"; ?>
 
-<div class="container mt-5"  style="padding-top: 50px" >
-    <h1 class="text-center">Category Content</h1>
+<main class="container mt-5">
 
-    <div class="row">
+    <!-- Jumbotron for Page Description -->
+    <div class="jumbotron">
+        <h1 class="display-4 text-center"><?php echo $pageDescription['title']; ?></h1>
+        <p class="lead text-center"><?php echo $pageDescription['description']; ?></p>
+    </div>
+
+    <!-- Page Content -->
+    <section class="row">
         <?php foreach ($pageContent as $content) : ?>
             <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <img src="<?php echo $content['image_path']; ?>" class="card-img-top" alt="<?php echo $content['title']; ?>">
+                    <img src="<?php echo $content['image_path']; ?>" class="card-img-top img-fluid"
+                         alt="<?php echo $content['title']; ?>">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $content['title']; ?></h5>
                         <p class="card-text"><?php echo $content['content']; ?></p>
@@ -41,17 +59,43 @@ include "include/header.php";
                 </div>
             </div>
         <?php endforeach; ?>
-    </div>
-</div>
+
+
+        <!-- Products Section -->
+        <div class="col-lg-12 mt-4">
+            <h2 class="text-center">Featured Products</h2>
+            <div class="row">
+                <?php foreach ($products as $product) : ?>
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="card h-100">
+                            <img src="<?php echo $product['image_path']; ?>" class="card-img-top img-fluid"
+                                 alt="<?php echo $product['name']; ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                                <?php if ($product['weight'] !== null && $product['weight'] > 0) : ?>
+                                    <p class="card-text">Weight: <?php echo $product['weight']; ?> kg</p>
+                                <?php endif; ?>
+                                <?php if ($product['price'] !== null && $product['price'] > 0) : ?>
+                                    <p class="card-text">Price: $<?php echo $product['price']; ?></p>
+                                <?php endif; ?>
+                                <p class="card-text"><?php echo $product['description']; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+
+
+    </section>
+</main>
 
 <!-- Bootstrap JS and other scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<?php
-include "include/footer.php";
-?>
+<?php include "include/footer.php"; ?>
 
 </body>
 </html>
