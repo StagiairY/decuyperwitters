@@ -8,7 +8,7 @@
                     Wij bieden een breed scala aan producten en professioneel advies</p>
             </div>
 
-            <div class="col-xs-6 col-md-3">
+            <div class="col-6 col-md-3 ml-auto">
                 <h6>categorieën</h6>
                 <ul class="list-unstyled">
                     <li><a href="./Rundvee.php">Rundvee</a></li>
@@ -22,7 +22,7 @@
                 </ul>
             </div>
 
-            <div class="col-xs-6 col-md-3">
+            <div class="col-6 col-md-3 ml-auto">
                 <h6>snelle Links</h6>
                 <ul class="list-unstyled">
                     <li><a href="#">Over Ons</a></li>
@@ -36,6 +36,7 @@
         </div>
         <hr>
     </div>
+
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-sm-6 col-xs-12">

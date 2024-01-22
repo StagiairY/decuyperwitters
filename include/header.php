@@ -129,15 +129,15 @@ $activeClass = function ($page, $condition = true) use ($current_page) {
 
 <div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
     <div class="container">
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-end justify-content-between"> <!-- Added justify-content-between class -->
             <div class="site-logo">
                 <a href="index.php" class="logo">
                     <img src="../images/part1/decuyperwitters.png" width="60" alt="Logo" class="img-fluid">
                 </a>
             </div>
-            <div class="mx-auto">
+            <div class="ml-auto">
                 <nav class="site-navigation position-relative text-right" role="navigation">
-                    <ul class="site-menu main-menu js-clone-nav mr-auto d-none pl-0 d-lg-block">
+                    <ul class="site-menu main-menu js-clone-nav d-none pl-0 d-lg-block">
                         <li class="<?= $activeClass('index.php', !isset($_GET['diensten'])); ?>">
                             <a href="index.php" class="nav-link text-left">Home</a>
                         </li>
@@ -159,6 +159,7 @@ $activeClass = function ($page, $condition = true) use ($current_page) {
         </div>
     </div>
 </div>
+
 
 
 

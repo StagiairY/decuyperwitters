@@ -50,8 +50,8 @@ $products = $statementProducts->fetchAll(PDO::FETCH_ASSOC);
         <?php foreach ($pageContent as $content) : ?>
             <div class="col-lg-6 mb-4">
                 <div class="card">
-                    <img src="<?php echo $content['image_path']; ?>" class="card-img-top img-fluid"
-                         alt="<?php echo $content['title']; ?>">
+                    <img src="<?php echo $content['image_path']; ?>" class="card-img-top img-fluid rounded"
+                         alt="<?php echo $content['title']; ?>" style="width: 100%; height: 300px; object-fit: cover;">
                     <div class="card-body">
                         <h5 class="card-title"><?php echo $content['title']; ?></h5>
                         <p class="card-text"><?php echo $content['content']; ?></p>
@@ -68,8 +68,8 @@ $products = $statementProducts->fetchAll(PDO::FETCH_ASSOC);
                 <?php foreach ($products as $product) : ?>
                     <div class="col-lg-3 col-md-6 mb-4">
                         <div class="card h-100">
-                            <img src="<?php echo $product['image_path']; ?>" class="card-img-top img-fluid"
-                                 alt="<?php echo $product['name']; ?>">
+                            <img src="<?php echo $product['image_path']; ?>" class="card-img-top img-fluid rounded"
+                                 alt="<?php echo $product['name']; ?>" style="width: 100%; height: 200px; object-fit: cover;">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $product['name']; ?></h5>
                                 <?php if ($product['weight'] !== null && $product['weight'] > 0) : ?>
