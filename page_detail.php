@@ -40,28 +40,33 @@ $products = $statementProducts->fetchAll(PDO::FETCH_ASSOC);
 <main class="container mt-5">
 
     <!-- Jumbotron for Page Description -->
-    <div class="jumbotron">
-        <h1 class="display-4 text-center"><?php echo $pageDescription['title']; ?></h1>
-        <p class="lead text-center"><?php echo $pageDescription['description']; ?></p>
-    </div>
+    <?php if ($pageDescription) : ?>
+        <div class="jumbotron">
+            <h1 class="display-4 text-center"><?php echo $pageDescription['title']; ?></h1>
+            <p class="lead text-center"><?php echo $pageDescription['description']; ?></p>
+        </div>
+    <?php endif; ?>
 
     <!-- Page Content -->
-    <section class="row">
-        <?php foreach ($pageContent as $content) : ?>
-            <div class="col-lg-6 mb-4">
-                <div class="card">
-                    <img src="<?php echo $content['image_path']; ?>" class="card-img-top img-fluid rounded"
-                         alt="<?php echo $content['title']; ?>" style="width: 100%; height: 300px; object-fit: cover;">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $content['title']; ?></h5>
-                        <p class="card-text"><?php echo $content['content']; ?></p>
+    <?php if ($pageContent) : ?>
+        <section class="row">
+            <?php foreach ($pageContent as $content) : ?>
+                <div class="col-lg-6 mb-4">
+                    <div class="card">
+                        <img src="<?php echo $content['image_path']; ?>" class="card-img-top img-fluid rounded"
+                             alt="<?php echo $content['title']; ?>" style="width: 100%; height: 300px; object-fit: cover;">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $content['title']; ?></h5>
+                            <p class="card-text"><?php echo $content['content']; ?></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </section>
+    <?php endif; ?>
 
-
-        <!-- Products Section -->
+    <!-- Products Section -->
+    <?php if ($products) : ?>
         <div class="col-lg-12 mt-4">
             <h2 class="text-center">Featured Products</h2>
             <div class="row">
@@ -85,9 +90,8 @@ $products = $statementProducts->fetchAll(PDO::FETCH_ASSOC);
                 <?php endforeach; ?>
             </div>
         </div>
+    <?php endif; ?>
 
-
-    </section>
 </main>
 
 <!-- Bootstrap JS and other scripts -->

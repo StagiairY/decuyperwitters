@@ -60,7 +60,7 @@ include "includes/db.php";
                   INNER JOIN main_category mc ON c.main_category_id = mc.id
                   ORDER BY c.main_category_id, c.order_column";
 
-        $result = $conn->query($query);
+        $result = $pdo->query($query);
 
         if ($result) {
             // Initialize variables to keep track of the current main category
