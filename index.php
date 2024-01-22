@@ -261,7 +261,7 @@ foreach ($mainCategories as $mainCategory) {
     echo '<div class="row ">';
     foreach ($categories as $category) {
         echo '<div class="col-lg-3 col-md-6 categoryItem">';
-        echo '<a href="./' . $category['name'] . '.php" class="service-link">';
+        echo '<a href="page_detail.php?category_id=' . $category['id'] . '" class="service-link">';
         echo '<div>';
         echo '<img src="' . $category['image_path'] . '" class="card-img-top p-0" alt="' . $category['name'] . ' Image" style="background-color: white;">';
         echo '<div class="card-body text-center p-1 m-1">';
@@ -271,6 +271,7 @@ foreach ($mainCategories as $mainCategory) {
         echo '</a>';
         echo '</div>';
     }
+
     echo '</div>';
     echo '</div>';
     echo '</div>';
