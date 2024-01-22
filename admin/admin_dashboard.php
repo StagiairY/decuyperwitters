@@ -1,79 +1,41 @@
-
 <?php
 include "includes/auth.php";
 include "includes/db.php";
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="admin/styles.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-        <!-- Bootstrap CSS link -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- Font Awesome CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="admin/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Bootstrap CSS link -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-
-
-
-    <!--=============== REMIXICONS ===============-->
+    <!-- Remix Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-
-    <!--=============== CSS ===============-->
+    <!-- CSS Styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
-
     <title>Admin Dashboard</title>
-
-
 </head>
 <body>
-<!--==================== HEADER ====================-->
+<!-- HEADER -->
 <header class="header" id="header" style="height: 4rem">
     <nav class="nav container">
-
-
         <a href="../index.php" class="nav__logo">
             <img src="../images/part1/decuyperwitters.png" width="60" alt="Logo" class="img-fluid">
         </a>
-
         <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-<!--                <li class="nav__item">-->
-<!--                    <a href="#" class="nav__link">Categories</a>-->
-<!--                </li>-->
-
-<!--                <li class="nav__item">-->
-<!--                    <a href="#" class="nav__link">About Us</a>-->
-<!--                </li>-->
-<!---->
-<!--                <li class="nav__item">-->
-<!--                    <a href="#" class="nav__link">Services</a>-->
-<!--                </li>-->
-<!---->
-<!--                <li class="nav__item">-->
-<!--                    <a href="#" class="nav__link">Featured</a>-->
-<!--                </li>-->
-<!---->
-<!--                <li class="nav__item">-->
-<!--                    <a href="#" class="nav__link">Contact Me</a>-->
-<!--                </li>-->
-            </ul>
-
-            <!-- Close button -->
+            <ul class="nav__list"></ul>
             <div class="nav__close" id="nav-close">
                 <i class="ri-close-line"></i>
             </div>
         </div>
-
         <form id="logout-form" action="includes/logout.php" method="post">
             <button type="submit" class="btn btn-logout">
                 <i class="ri-logout-box-line"></i>
@@ -86,22 +48,17 @@ include "includes/db.php";
     </nav>
 </header>
 
-
-
-
-<!--==================== MAIN ====================-->
-<main class="main" >
-
-
+<!-- MAIN -->
+<main class="main">
     <div class="container">
         <div class="hidden-true" style="height: 100px"></div>
 
         <?php
         // Fetch categories joined with main_category table, ordered by main_category_id and order_column
         $query = "SELECT c.id, c.name, c.image_path, c.order_column, c.archived, c.main_category_id, mc.name as main_category_name
-      FROM categories c
-      INNER JOIN main_category mc ON c.main_category_id = mc.id
-      ORDER BY c.main_category_id, c.order_column";
+                  FROM categories c
+                  INNER JOIN main_category mc ON c.main_category_id = mc.id
+                  ORDER BY c.main_category_id, c.order_column";
 
         $result = $conn->query($query);
 
@@ -135,15 +92,14 @@ include "includes/db.php";
                 // Display order_column
                 echo '<div class="position-absolute top-0 start-0 px-2 py-1 bg-dark text-white rounded">' . $row['order_column'] . '</div>';
 
-
                 // Display card body
                 echo '<div class="card-body text-center">';
                 echo '<h5 class="card-title">' . $row['name'] . '</h5>';
                 echo '<div class="btn-group" role="group" aria-label="Category Actions">';
-                echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-outline-dark"><i class="fas fa-edit"></i> Edit</a>';
-                echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-outline-secondary"><i class="fas fa-file"></i> Open</a>';
+                echo '<a href="includes/edit_category.php?id=' . $row['id'] . '" class="btn btn-outline-dark  w-50"><i class="fas fa-edit"></i> </a>';
+                echo '<a href="includes/edit_page.php?id=' . $row['id'] . '" class="btn btn-outline-secondary  w-50"><i class="fas fa-file"></i> </a>';
 
-                // Add a visually identifiable marker for archived categories
+
                 if ($row['archived']) {
                     // Unarchive button form
                     echo '<form action="includes/update_category.php" method="post" class="archive-form">';
@@ -183,18 +139,12 @@ include "includes/db.php";
         }
         ?>
     </div>
-
-
-
 </main>
 
-<!--=============== MAIN JS ===============-->
+<!-- MAIN JS -->
 <script src="assets/js/main.js"></script>
-
 <!-- Add this script tag to include SortableJS -->
-<script src="https://raw.githubusercontent.com/SortableJS/Sortable/master/Sortable.min.js"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
 <script>
     function showEditForm(categoryId) {
         var editForm = document.getElementById('edit-form-' + categoryId);
@@ -203,9 +153,3 @@ include "includes/db.php";
 </script>
 </body>
 </html>
-
-
-
-
-
-

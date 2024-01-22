@@ -225,12 +225,10 @@ include ('include/db.php');
     <!--            <h3 class="section-title section-title-custom ">Huis en Tuin</h3>-->
     <!--        </a>-->
     <!--    </div>-->
-
-
-    <!--Dieren Summary-->
+    <!-- Dieren Summary -->
 <?php
 try {
-    $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $user, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $db_user, $db_password);
 } catch (PDOException $e) {
     echo $e->getMessage();
 }
@@ -277,8 +275,8 @@ foreach ($mainCategories as $mainCategory) {
     echo '</div>';
     echo '</div>';
 }
-
 ?>
+
 
 
     <div class="site-section pb-0">

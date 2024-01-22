@@ -8,7 +8,7 @@ if (isset($_GET['id'])) {
 
     try {
         // Establish a new PDO connection (replace with your connection details)
-        $pdo = new PDO("pgsql:host=$host;dbname=$dbname", $db_user, $db_password);
+        $pdo = new PDO("mysql:host=$host;dbname=$dbname", $db_user, $db_password);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // Fetch category details including new fields
@@ -28,9 +28,6 @@ if (isset($_GET['id'])) {
     die("Category ID not provided");
 }
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,8 +93,6 @@ if (isset($_GET['id'])) {
                 </div>
                 <input type="hidden" name="category_id" value="<?php echo $category['id']; ?>">
                 <button type="submit" class="btn btn-primary">Update Category</button>
-
-
             </form>
         </div>
     </div>
@@ -126,14 +121,4 @@ if (isset($_GET['id'])) {
             </div>
         </div>
     </div>
-</div>
-
-
-<!-- Add Bootstrap JS and other scripts here -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-
-</html>
-
+</div
