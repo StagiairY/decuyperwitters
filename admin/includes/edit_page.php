@@ -99,12 +99,58 @@ if ($categoryId) {
 <main class="container mt-5">
     <h2>Edit Category: <?php echo $category['name']; ?></h2>
 
-    <!-- Button to trigger modal for adding new product -->
-    <button type="button" class="btn btn-success mt-3" data-toggle="modal" data-target="#addProductModal">
-        Add New Product
-    </button>
 
-    <!-- Add Product Modal -->
+
+    <?php if ($pageDescription) : ?>
+        <div class="col-lg-12 mb-4">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center"><?php echo $pageDescription['title']; ?></h1>
+                <p class="lead text-center"> <?php echo $pageDescription['description']; ?></p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPageModal">
+                    Edit
+                </button>
+            </div>
+        </div>
+    <?php endif; ?>
+
+
+
+
+    <!-- Edit Page Description Modal -->
+    <div class="modal fade" id="editPageModal" tabindex="-1" role="dialog" aria-labelledby="editPageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editPageModalLabel">Edit Page Details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Form for editing page details -->
+                    <form action="update_page_description.php" method="post">
+                        <input type="hidden" name="category_id" value="<?php echo $categoryId; ?>">
+                        <div class="form-group">
+                            <label for="editPageTitle">Page Title</label>
+                            <input type="text" class="form-control" id="editPageTitle" name="editPageTitle" value="<?php echo $pageDescription['title']; ?>" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="editPageDescription">Page Description</label>
+                            <textarea class="form-control" id="editPageDescription" name="editPageDescription" rows="10" required><?php echo $pageDescription['description']; ?></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Button to trigger modal for adding new product -->
+
+
+
     <!-- Add Product Modal -->
     <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -152,38 +198,38 @@ if ($categoryId) {
         </div>
     </div>
 
-    <!-- Display existing products -->
-    <h3>Existing Products</h3>
-    <div class="table-responsive">
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Product Name</th>
-                <th>Weight</th>
-                <th>Price</th>
-                <th>Description</th>
-                <th>Image</th>
-                <th>Actions</th>
-            </tr>
-            </thead>
 
-            <tbody>
-            <?php foreach ($products as $product) : ?>
-                <tr>
-                    <td><?php echo $product['name']; ?></td>
-                    <td><?php echo $product['weight']; ?></td>
-                    <td><?php echo $product['price']; ?></td>
-                    <td><?php echo $product['description']; ?></td>
-                    <td><?php echo $product['image_path']; ?></td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editProductModal<?php echo $product['id']; ?>">
+    <!-- Display existing products -->
+    <h3 class="text-center " >Featured Products</h3>
+    <div class="row">
+
+
+        <?php foreach ($products as $product) : ?>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img src="<?php echo $product['image_path']; ?>" class="card-img-top img-fluid rounded"
+                         alt="<?php echo $product['name']; ?>" style="width: 100%; height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $product['name']; ?></h5>
+                        <?php if ($product['weight'] !== null && $product['weight'] > 0) : ?>
+                            <p class="card-text">Weight: <?php echo $product['weight']; ?> kg</p>
+                        <?php endif; ?>
+                        <?php if ($product['price'] !== null && $product['price'] > 0) : ?>
+                            <p class="card-text">Price: $<?php echo $product['price']; ?></p>
+                        <?php endif; ?>
+                        <p class="card-text"><?php echo $product['description']; ?></p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#editProductModal<?php echo $product['id']; ?>">
                             Edit
                         </button>
-                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeProductModal<?php echo $product['id']; ?>">
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#removeProductModal<?php echo $product['id']; ?>">
                             Remove
                         </button>
-                    </td>
-                </tr>
+                    </div>
+                </div>
+            </div>
+
 
 
                 <!-- Edit Product Modal -->
@@ -254,10 +300,31 @@ if ($categoryId) {
 
 
             <?php endforeach; ?>
+
+
+        <div class="col-lg-3 col-md-6 mb-4 btn" id="addProductCard">
+            <div class="card h-100 bg-light">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <div>
+                        <i class="fas fa-plus fa-3x text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
             </tbody>
         </table>
     </div>
 </main>
+
+<script>
+    // JavaScript to handle click event and trigger the modal
+    document.getElementById('addProductCard').addEventListener('click', function () {
+        $('#addProductModal').modal('show');
+    });
+</script>
 
 <!-- Bootstrap JS and other scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
