@@ -97,15 +97,23 @@ if ($categoryId) {
 </head>
 
 <main class="container mt-5">
-    <h2>Edit Category: <?php echo $category['name']; ?></h2>
 
-
-
-    <?php if ($pageDescription) : ?>
+    <h3 class="text-center " >page description</h3>
+    <?php if (!empty($pageDescription)) : ?>
         <div class="col-lg-12 mb-4">
             <div class="jumbotron">
                 <h1 class="display-4 text-center"><?php echo $pageDescription['title']; ?></h1>
-                <p class="lead text-center"> <?php echo $pageDescription['description']; ?></p>
+                <p class="lead text-center"><?php echo $pageDescription['description']; ?></p>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPageModal">
+                    Edit
+                </button>
+            </div>
+        </div>
+    <?php else : ?>
+        <div class="col-lg-12 mb-4">
+            <div class="jumbotron">
+                <h1 class="display-4 text-center">Placeholder Title</h1>
+                <p class="lead text-center">Placeholder Description</p>
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editPageModal">
                     Edit
                 </button>
@@ -146,8 +154,148 @@ if ($categoryId) {
     </div>
 
 
+    <h3 class="text-center " >page content</h3>
 
-    <!-- Button to trigger modal for adding new product -->
+    <!-- Display existing page content -->
+    <div class="row">
+        <?php foreach ($pageContent as $content) : ?>
+            <div class="col-lg-6 mb-4">
+                <div class="card">
+                    <img src="<?php echo $content['image_path']; ?>" class="card-img-top img-fluid rounded"
+                         alt="<?php echo $content['title']; ?>" style="width: 100%; height: 300px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $content['title']; ?></h5>
+                        <p class="card-text"><?php echo $content['content']; ?></p>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#editPageContentModal<?php echo $content['id']; ?>">
+                            Edit
+                        </button>
+                        <button type="button" class="btn btn-danger" data-toggle="modal"
+                                data-target="#removePageContentModal<?php echo $content['id']; ?>">
+                            Remove
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Edit Page Content Modal -->
+            <div class="modal fade" id="editPageContentModal<?php echo $content['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="editPageContentModalLabel<?php echo $content['id']; ?>" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="editPageContentModalLabel<?php echo $content['id']; ?>">Edit Page Content: <?php echo $content['title']; ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Form for editing page content -->
+                            <form action="update_page_content.php?category_id=<?php echo $categoryId; ?>" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="page_content_id" value="<?php echo $content['id']; ?>">
+                                <div class="form-group">
+                                    <label for="editPageTitle">Page Title</label>
+                                    <input type="text" class="form-control" id="editPageTitle" name="editPageTitle" value="<?php echo $content['title']; ?>" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPageContent">Page Content</label>
+                                    <textarea class="form-control" id="editPageContent" name="editPageContent" rows="5" required><?php echo $content['content']; ?></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="editPageImage">Page Image</label>
+                                    <input type="file" class="form-control-file" id="editPageImage" name="editPageImage">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Remove Page Content Modal -->
+            <div class="modal fade" id="removePageContentModal<?php echo $content['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="removePageContentModalLabel<?php echo $content['id']; ?>" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="removePageContentModalLabel<?php echo $content['id']; ?>">Remove Page Content: <?php echo $content['title']; ?></h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <!-- Form for removing page content -->
+                            <form action="remove_page_content.php?category_id=<?php echo $categoryId; ?>" method="post">
+                                <input type="hidden" name="page_content_id" value="<?php echo $content['id']; ?>">
+                                <input type="hidden" name="category_id" value="<?php echo $categoryId; ?>">
+                                <p>Are you sure you want to remove this page content?</p>
+                                <button type="submit" class="btn btn-danger">Remove Page Content</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <!-- Add Page Content Button -->
+    <div class="row">
+        <div class="col-lg-6 mb-4 btn" id="addPageContentBtn">
+            <div class="card h-100 bg-light" style="min-height: 300px; min-width: 50%">
+                <div class="card-body d-flex align-items-center justify-content-center">
+                    <div>
+                        <i class="fas fa-plus fa-3x text-secondary"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addPageContentModal" tabindex="-1" role="dialog" aria-labelledby="addPageContentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addPageContentModalLabel">Add Page Content</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Your form for adding new page content -->
+                    <form action="add_page_content.php?category_id=<?php echo $categoryId; ?>" method="POST" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="pageTitle">Page Title</label>
+                            <input type="text" class="form-control" id="pageTitle" name="pageTitle" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pageContent">Page Content</label>
+                            <textarea class="form-control" id="pageContent" name="pageContent" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="pageImage">Page Image</label>
+                            <input type="file" class="form-control-file" id="pageImage" name="pageImage" accept="image/*" required>
+                        </div>
+
+                        <input type="hidden" name="category_id" value="<?php echo $categoryId; ?>">
+
+                        <button type="submit" class="btn btn-primary">Add Page Content</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -302,8 +450,9 @@ if ($categoryId) {
             <?php endforeach; ?>
 
 
-        <div class="col-lg-3 col-md-6 mb-4 btn" id="addProductCard">
-            <div class="card h-100 bg-light">
+
+        <div class="col-lg-3 col-md-6 mb-4 btn " id="addProductCard" style="width: 100%; min-height: 400px; object-fit: cover;">
+            <div class="card h-100 bg-light" >
                 <div class="card-body d-flex align-items-center justify-content-center">
                     <div>
                         <i class="fas fa-plus fa-3x text-secondary"></i>
@@ -325,6 +474,14 @@ if ($categoryId) {
         $('#addProductModal').modal('show');
     });
 </script>
+
+<script>
+    // JavaScript to handle click event and trigger the modal
+    document.getElementById('addPageContentBtn').addEventListener('click', function () {
+        $('#addPageContentModal').modal('show');
+    });
+</script>
+
 
 <!-- Bootstrap JS and other scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
